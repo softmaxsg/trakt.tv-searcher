@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF59B6775047E549EB660066 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BC39553A4DC41CD354E0 /* Assets.swift */; };
+		D8C294611C8C4A55001B2AD4 /* AssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */; };
 		D8D1619E1C8C333B0079F89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1619D1C8C333B0079F89D /* AppDelegate.swift */; };
 		D8D161A51C8C333B0079F89D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D161A41C8C333B0079F89D /* Assets.xcassets */; };
 		D8D161A81C8C333B0079F89D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D161A61C8C333B0079F89D /* LaunchScreen.storyboard */; };
@@ -23,6 +25,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF59BC39553A4DC41CD354E0 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearcherTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
 		D8D1619A1C8C333B0079F89D /* TraktSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1619D1C8C333B0079F89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D161A41C8C333B0079F89D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 				D8D161A41C8C333B0079F89D /* Assets.xcassets */,
 				D8D161A61C8C333B0079F89D /* LaunchScreen.storyboard */,
 				D8D161A91C8C333B0079F89D /* Info.plist */,
+				CF59BC39553A4DC41CD354E0 /* Assets.swift */,
 			);
 			path = TraktSearcher;
 			sourceTree = "<group>";
@@ -83,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				D8D161B41C8C333B0079F89D /* Info.plist */,
+				D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */,
+				D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */,
 			);
 			path = TraktSearcherTests;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D1619E1C8C333B0079F89D /* AppDelegate.swift in Sources */,
+				CF59B6775047E549EB660066 /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C294611C8C4A55001B2AD4 /* AssetsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,10 +341,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TraktSearcherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearcherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TraktSearcherTests/TraktSearcherTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraktSearcher.app/TraktSearcher";
 			};
 			name = Debug;
@@ -343,10 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TraktSearcherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearcherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TraktSearcherTests/TraktSearcherTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraktSearcher.app/TraktSearcher";
 			};
 			name = Release;
