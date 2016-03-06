@@ -81,6 +81,8 @@
 		D8C294721C8C517F001B2AD4 /* TracktSearchAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TracktSearchAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2947B1C8C517F001B2AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8C294871C8C55F2001B2AD4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D8C294911C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TracktSearchAPIIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C294951C8C7DF8001B2AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D1619A1C8C333B0079F89D /* TraktSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1619D1C8C333B0079F89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D161A91C8C333B0079F89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C294731C8C517F001B2AD4 /* TracktSearchAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8C2948E1C8C7DF8001B2AD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C294961C8C7DF8001B2AD4 /* TracktSearchAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,9 +177,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D8C294921C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8C294951C8C7DF8001B2AD4 /* Info.plist */,
+			);
+			path = TracktSearchAPIIntegrationTests;
+			sourceTree = "<group>";
+		};
 		D8D161911C8C333B0079F89D = {
 			isa = PBXGroup;
 			children = (
+				D8C294921C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests */,
 				D8C2948C1C8C57B9001B2AD4 /* Frameworks */,
 				D8D1619C1C8C333B0079F89D /* TraktSearcher */,
 				D8D161B11C8C333B0079F89D /* TraktSearcherTests */,
@@ -186,6 +205,7 @@
 				D8D161AE1C8C333B0079F89D /* TraktSearcherTests.xctest */,
 				D8C294691C8C517F001B2AD4 /* TracktSearchAPI.framework */,
 				D8C294721C8C517F001B2AD4 /* TracktSearchAPITests.xctest */,
+				D8C294911C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +282,24 @@
 			productReference = D8C294721C8C517F001B2AD4 /* TracktSearchAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D8C294901C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8C2949B1C8C7DF8001B2AD4 /* Build configuration list for PBXNativeTarget "TracktSearchAPIIntegrationTests" */;
+			buildPhases = (
+				D8C2948D1C8C7DF8001B2AD4 /* Sources */,
+				D8C2948E1C8C7DF8001B2AD4 /* Frameworks */,
+				D8C2948F1C8C7DF8001B2AD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8C294981C8C7DF8001B2AD4 /* PBXTargetDependency */,
+			);
+			name = TracktSearchAPIIntegrationTests;
+			productName = TracktSearchAPIIntegrationTests;
+			productReference = D8C294911C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D8D161991C8C333B0079F89D /* TraktSearcher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8D161B71C8C333B0079F89D /* Build configuration list for PBXNativeTarget "TraktSearcher" */;
@@ -315,6 +353,9 @@
 					D8C294711C8C517F001B2AD4 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					D8C294901C8C7DF8001B2AD4 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 					D8D161991C8C333B0079F89D = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -341,6 +382,7 @@
 				D8D161AD1C8C333B0079F89D /* TraktSearcherTests */,
 				D8C294681C8C517F001B2AD4 /* TracktSearchAPI */,
 				D8C294711C8C517F001B2AD4 /* TracktSearchAPITests */,
+				D8C294901C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -393,6 +435,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8C2948D1C8C7DF8001B2AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8D161961C8C333B0079F89D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +477,11 @@
 			isa = PBXTargetDependency;
 			target = D8C294681C8C517F001B2AD4 /* TracktSearchAPI */;
 			targetProxy = D8C2947C1C8C517F001B2AD4 /* PBXContainerItemProxy */;
+		};
+		D8C294981C8C7DF8001B2AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8C294681C8C517F001B2AD4 /* TracktSearchAPI */;
+			targetProxy = D8C294971C8C7DF8001B2AD4 /* PBXContainerItemProxy */;
 		};
 		D8D161B01C8C333B0079F89D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -514,6 +568,26 @@
 				INFOPLIST_FILE = TracktSearchAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TracktSearchAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D8C294991C8C7DF8001B2AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TracktSearchAPIIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TracktSearchAPIIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D8C2949A1C8C7DF8001B2AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TracktSearchAPIIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TracktSearchAPIIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -682,6 +756,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D8C2949B1C8C7DF8001B2AD4 /* Build configuration list for PBXNativeTarget "TracktSearchAPIIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8C294991C8C7DF8001B2AD4 /* Debug */,
+				D8C2949A1C8C7DF8001B2AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		D8D161951C8C333B0079F89D /* Build configuration list for PBXProject "TraktSearcher" */ = {
 			isa = XCConfigurationList;
