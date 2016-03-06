@@ -70,8 +70,11 @@
 
 /* Begin PBXFileReference section */
 		CF59B09C3E9D91B6CA046CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TraktSearcher/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		CF59B664374928EC808C11D4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CF59BA004F582AC914DBFCFE /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		CF59BD1629362C7623959A70 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		CF59BDBFDC6E4E4865B2558C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CF59BE86DF97B1A666267FC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CF59BF1CF729D1B3E5480CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearcherTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
@@ -195,6 +198,9 @@
 				D8C2946A1C8C517F001B2AD4 /* TracktSearchAPI */,
 				D8C294781C8C517F001B2AD4 /* TracktSearchAPITests */,
 				D8D1619B1C8C333B0079F89D /* Products */,
+				CF59BD1629362C7623959A70 /* Cartfile */,
+				CF59B664374928EC808C11D4 /* LICENSE */,
+				CF59BE86DF97B1A666267FC7 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
