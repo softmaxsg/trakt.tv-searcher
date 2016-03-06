@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF59B605A7B8F5B0E6C0C38D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BDBFDC6E4E4865B2558C /* MainViewController.swift */; };
 		CF59B6775047E549EB660066 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BC39553A4DC41CD354E0 /* Assets.swift */; };
 		D8C294611C8C4A55001B2AD4 /* AssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */; };
 		D8D1619E1C8C333B0079F89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1619D1C8C333B0079F89D /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		CF59BC39553A4DC41CD354E0 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		CF59BDBFDC6E4E4865B2558C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearcherTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
 		D8D1619A1C8C333B0079F89D /* TraktSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF59B19E3B1877A9B6DBDB34 /* Views & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF59BDBFDC6E4E4865B2558C /* MainViewController.swift */,
+			);
+			path = "Views & Controllers";
+			sourceTree = "<group>";
+		};
 		D8D161911C8C333B0079F89D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 				D8D161A61C8C333B0079F89D /* LaunchScreen.storyboard */,
 				D8D161A91C8C333B0079F89D /* Info.plist */,
 				CF59BC39553A4DC41CD354E0 /* Assets.swift */,
+				CF59B19E3B1877A9B6DBDB34 /* Views & Controllers */,
 			);
 			path = TraktSearcher;
 			sourceTree = "<group>";
@@ -197,6 +208,7 @@
 			files = (
 				D8D1619E1C8C333B0079F89D /* AppDelegate.swift in Sources */,
 				CF59B6775047E549EB660066 /* Assets.swift in Sources */,
+				CF59B605A7B8F5B0E6C0C38D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +397,7 @@
 				D8D161B91C8C333B0079F89D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D161BA1C8C333B0079F89D /* Build configuration list for PBXNativeTarget "TraktSearcherTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +406,7 @@
 				D8D161BC1C8C333B0079F89D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
