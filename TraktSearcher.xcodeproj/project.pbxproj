@@ -20,6 +20,7 @@
 		D8C2948A1C8C56EA001B2AD4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; };
 		D8C2948B1C8C56EA001B2AD4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8C294A31C8C8D7A001B2AD4 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; };
+		D8C294A61C8C909B001B2AD4 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */; };
 		D8D1619E1C8C333B0079F89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1619D1C8C333B0079F89D /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		D8C294911C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TracktSearchAPIIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C294951C8C7DF8001B2AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		D8D1619A1C8C333B0079F89D /* TraktSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1619D1C8C333B0079F89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D161A91C8C333B0079F89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C294A61C8C909B001B2AD4 /* AlamofireObjectMapper.framework in Frameworks */,
 				D8C294A31C8C8D7A001B2AD4 /* ObjectMapper.framework in Frameworks */,
 				D8C294881C8C55F2001B2AD4 /* Alamofire.framework in Frameworks */,
 			);
@@ -178,6 +181,7 @@
 		D8C2948C1C8C57B9001B2AD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */,
 				D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */,
 				D8C294871C8C55F2001B2AD4 /* Alamofire.framework */,
 			);
