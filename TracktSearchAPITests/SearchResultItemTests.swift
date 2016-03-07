@@ -12,35 +12,13 @@ import ObjectMapper
 
 class SearchResultItemTests: XCTestCase
 {
-    private static let jsonTypeKey = "type"
-    private static let jsonScoreKey = "score"
-    private static let jsonMovieKey = "movie"
-
-    private static let jsonTitleKey = "title"
-    private static let jsonOverviewKey = "overview"
-    private static let jsonYearKey = "year"
-
     func testMappingNormal()
     {
-        let movieDictionary = [
-            self.dynamicType.jsonTitleKey: "Title",
-            self.dynamicType.jsonOverviewKey: "Overview",
-            self.dynamicType.jsonYearKey: 2016,
-        ]
-
-        let score = 123.456
-
-        let dictionary = [
-            self.dynamicType.jsonTypeKey: "movie",
-            self.dynamicType.jsonScoreKey: score,
-            self.dynamicType.jsonMovieKey: movieDictionary,
-        ]
-
-        let resultItem = Mapper<SearchResultItem>().map(dictionary)
+        let resultItem = Mapper<SearchResultItem>().map(JSONHelpers.SearchResultItem.defaultValue)
         XCTAssertNotNil(resultItem)
 
         XCTAssertEqual(resultItem!.kind!, ItemKind.Movie)
-        XCTAssertEqual(resultItem!.score!, score)
+        XCTAssertEqual(resultItem!.score!, JSONHelpers.SearchResultItem.DefaultValues.score)
 
         XCTAssertNotNil(resultItem!.item as? Movie)
         XCTAssertTrue(resultItem!.item!.isValid())
@@ -63,9 +41,9 @@ class SearchResultItemTests: XCTestCase
     func testMappingInvalidValues()
     {
         let dictionary = [
-            self.dynamicType.jsonTypeKey: "invalid",
-            self.dynamicType.jsonScoreKey: "invalid",
-            self.dynamicType.jsonMovieKey: "invalid",
+            JSONHelpers.SearchResultItem.Keys.type: JSONHelpers.InvalidValues.string,
+            JSONHelpers.SearchResultItem.Keys.score: JSONHelpers.InvalidValues.string,
+            JSONHelpers.SearchResultItem.Keys.movie: JSONHelpers.InvalidValues.string,
         ]
 
         let resultItem = Mapper<SearchResultItem>().map(dictionary)
@@ -80,15 +58,9 @@ class SearchResultItemTests: XCTestCase
 
     func testIsValidTrue()
     {
-        let movieDictionary = [
-            self.dynamicType.jsonTitleKey: "Title",
-            self.dynamicType.jsonOverviewKey: "Overview",
-            self.dynamicType.jsonYearKey: 2016,
-        ]
-
         let dictionary = [
-            self.dynamicType.jsonTypeKey: "movie",
-            self.dynamicType.jsonMovieKey: movieDictionary,
+            JSONHelpers.SearchResultItem.Keys.type: JSONHelpers.SearchResultItem.DefaultValues.type,
+            JSONHelpers.SearchResultItem.Keys.movie: JSONHelpers.Movie.defaultValue,
         ]
 
         let resultItem = Mapper<SearchResultItem>().map(dictionary)
@@ -98,26 +70,20 @@ class SearchResultItemTests: XCTestCase
 
     func testIsValidFalse()
     {
-        let movieDictionary = [
-            self.dynamicType.jsonTitleKey: "Title",
-            self.dynamicType.jsonOverviewKey: "Overview",
-            self.dynamicType.jsonYearKey: 2016,
-        ]
-
         let invalidDictionaries = [
             [
-                self.dynamicType.jsonTypeKey: "invalid",
-                self.dynamicType.jsonMovieKey: movieDictionary,
+                JSONHelpers.SearchResultItem.Keys.type: JSONHelpers.InvalidValues.string,
+                JSONHelpers.SearchResultItem.Keys.movie: JSONHelpers.Movie.defaultValue,
             ],
             [
-                self.dynamicType.jsonTypeKey: "movie",
-                self.dynamicType.jsonMovieKey: "invalid",
+                JSONHelpers.SearchResultItem.Keys.type: JSONHelpers.SearchResultItem.DefaultValues.type,
+                JSONHelpers.SearchResultItem.Keys.movie: JSONHelpers.InvalidValues.string,
             ],
             [
-                self.dynamicType.jsonMovieKey: movieDictionary,
+                JSONHelpers.SearchResultItem.Keys.movie: JSONHelpers.Movie.defaultValue,
             ],
             [
-                self.dynamicType.jsonTypeKey: "movie",
+                JSONHelpers.SearchResultItem.Keys.type: JSONHelpers.SearchResultItem.DefaultValues.type,
             ],
         ]
 

@@ -12,49 +12,14 @@ import ObjectMapper
 
 class MovieTests: XCTestCase
 {
-    private static let jsonTitleKey = "title"
-    private static let jsonOverviewKey = "overview"
-    private static let jsonYearKey = "year"
-    private static let jsonImagesKey = "images"
-
-    private static let jsonFullKey = "full"
-    private static let jsonMediumKey = "medium"
-    private static let jsonThumbKey = "thumb"
-
     func testMappingNormal()
     {
-        let movieTitle = "Title"
-        let movieOverview = "Overview"
-        let movieYear: UInt = 2016
-
-        let imageUrls = [
-            self.dynamicType.jsonFullKey: "https://example.com/full.jpg",
-            self.dynamicType.jsonMediumKey: "https://example.com/medium.jpg",
-            self.dynamicType.jsonThumbKey: "https://example.com/thumb.jpg",
-        ]
-
-        let movieImages = [
-            MovieImageKind.FanArt.rawValue: imageUrls,
-            MovieImageKind.Poster.rawValue: imageUrls,
-            MovieImageKind.Logo.rawValue: imageUrls,
-            MovieImageKind.ClearArt.rawValue: imageUrls,
-            MovieImageKind.Banner.rawValue: imageUrls,
-            MovieImageKind.Thumbnail.rawValue: imageUrls,
-        ]
-
-        let dictionary = [
-            self.dynamicType.jsonTitleKey: movieTitle,
-            self.dynamicType.jsonOverviewKey: movieOverview,
-            self.dynamicType.jsonYearKey: movieYear,
-            self.dynamicType.jsonImagesKey: movieImages,
-        ]
-
-        let movie = Mapper<Movie>().map(dictionary)
+        let movie = Mapper<Movie>().map(JSONHelpers.Movie.defaultValue)
         XCTAssertNotNil(movie)
 
-        XCTAssertEqual(movie!.title!, movieTitle)
-        XCTAssertEqual(movie!.overview!, movieOverview)
-        XCTAssertEqual(movie!.year!, movieYear)
+        XCTAssertEqual(movie!.title!, JSONHelpers.Movie.DefaultValues.title)
+        XCTAssertEqual(movie!.overview!, JSONHelpers.Movie.DefaultValues.overview)
+        XCTAssertEqual(movie!.year!, JSONHelpers.Movie.DefaultValues.year)
 
         XCTAssertNotNil(movie!.images![MovieImageKind.FanArt])
         XCTAssertNotNil(movie!.images![MovieImageKind.Poster])
@@ -82,10 +47,10 @@ class MovieTests: XCTestCase
     func testMappingInvalidValues()
     {
         let dictionary = [
-            self.dynamicType.jsonTitleKey: 0,
-            self.dynamicType.jsonOverviewKey: 0,
-            self.dynamicType.jsonYearKey: "invalid",
-            self.dynamicType.jsonImagesKey: "invalid",
+            JSONHelpers.Movie.Keys.title: JSONHelpers.InvalidValues.integer,
+            JSONHelpers.Movie.Keys.overview: JSONHelpers.InvalidValues.integer,
+            JSONHelpers.Movie.Keys.year: JSONHelpers.InvalidValues.string,
+            JSONHelpers.Movie.Keys.images: JSONHelpers.InvalidValues.string,
         ]
 
         let movie = Mapper<Movie>().map(dictionary)
@@ -102,8 +67,8 @@ class MovieTests: XCTestCase
     func testIsValidTrue()
     {
         let dictionary = [
-            self.dynamicType.jsonTitleKey: "Title",
-            self.dynamicType.jsonYearKey: 2016,
+            JSONHelpers.Movie.Keys.title: JSONHelpers.Movie.DefaultValues.title,
+            JSONHelpers.Movie.Keys.year: JSONHelpers.Movie.DefaultValues.year,
         ]
 
         let movie = Mapper<Movie>().map(dictionary)
@@ -115,26 +80,26 @@ class MovieTests: XCTestCase
     {
         let invalidDictionaries = [
             [
-                self.dynamicType.jsonTitleKey: 0,
-                self.dynamicType.jsonYearKey: "invalid",
+                JSONHelpers.Movie.Keys.title: JSONHelpers.InvalidValues.integer,
+                JSONHelpers.Movie.Keys.year: JSONHelpers.InvalidValues.string,
             ],
             [
-                self.dynamicType.jsonTitleKey: "Title",
+                JSONHelpers.Movie.Keys.title: JSONHelpers.Movie.DefaultValues.title,
             ],
             [
-                self.dynamicType.jsonYearKey: 2016,
+                JSONHelpers.Movie.Keys.year: JSONHelpers.Movie.DefaultValues.year,
             ],
             [
-                self.dynamicType.jsonTitleKey: 0,
-                self.dynamicType.jsonYearKey: 2016,
+                JSONHelpers.Movie.Keys.title: JSONHelpers.InvalidValues.integer,
+                JSONHelpers.Movie.Keys.year: JSONHelpers.Movie.DefaultValues.year,
             ],
             [
-                self.dynamicType.jsonTitleKey: "Title",
-                self.dynamicType.jsonYearKey: "invalid",
+                JSONHelpers.Movie.Keys.title: JSONHelpers.Movie.DefaultValues.title,
+                JSONHelpers.Movie.Keys.year: JSONHelpers.InvalidValues.string,
             ],
             [
-                self.dynamicType.jsonTitleKey: "Title",
-                self.dynamicType.jsonYearKey: 0,
+                JSONHelpers.Movie.Keys.title: JSONHelpers.Movie.DefaultValues.title,
+                JSONHelpers.Movie.Keys.year: JSONHelpers.InvalidValues.integer,
             ],
         ]
 

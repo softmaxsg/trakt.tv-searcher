@@ -12,10 +12,6 @@ import ObjectMapper
 
 class MovieImageKindTransformTests: XCTestCase
 {
-    private static let jsonFullKey = "full"
-    private static let jsonMediumKey = "medium"
-    private static let jsonThumbKey = "thumb"
-
     func testToJSON()
     {
         let transformer = MovieImageKindTransform()
@@ -26,24 +22,8 @@ class MovieImageKindTransformTests: XCTestCase
 
     func testFromJSONNormal()
     {
-        let imageUrls = [
-            self.dynamicType.jsonFullKey: "https://example.com/full.jpg",
-            self.dynamicType.jsonMediumKey: "https://example.com/medium.jpg",
-            self.dynamicType.jsonThumbKey: "https://example.com/thumb.jpg",
-        ]
-
-        let dictionary = [
-            MovieImageKind.FanArt.rawValue: imageUrls,
-            MovieImageKind.Poster.rawValue: imageUrls,
-            MovieImageKind.Logo.rawValue: imageUrls,
-            MovieImageKind.ClearArt.rawValue: imageUrls,
-            MovieImageKind.Banner.rawValue: imageUrls,
-            MovieImageKind.Thumbnail.rawValue: imageUrls,
-        ]
-
-
         let transformer = MovieImageKindTransform()
-        let value = transformer.transformFromJSON(dictionary)
+        let value = transformer.transformFromJSON(JSONHelpers.MovieImageKinds.defaultValue)
         XCTAssertNotNil(value)
 
         XCTAssertNotNil(value![MovieImageKind.FanArt])
@@ -68,13 +48,13 @@ class MovieImageKindTransformTests: XCTestCase
 
         let invalidDictinoaries = [
             [
-                "invalid": [
-                    self.dynamicType.jsonFullKey: "https://example.com/full.jpg"
+                JSONHelpers.InvalidValues.string: [
+                    JSONHelpers.ImageUrls.Keys.full: JSONHelpers.ImageUrls.DefaultValues.full
                 ],
             ],
             [
                 MovieImageKind.Poster.rawValue: Dictionary<String, AnyObject>(),
-                MovieImageKind.Logo.rawValue: "invalid"
+                MovieImageKind.Logo.rawValue: JSONHelpers.InvalidValues.string
             ],
         ]
 

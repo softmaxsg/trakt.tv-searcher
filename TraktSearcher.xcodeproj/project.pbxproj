@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF59B0682816BED02EEF5B58 /* TraktItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B9DC69E000600D3833C2 /* TraktItem.swift */; };
 		CF59B1A147AB0C143EA2F2D9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BA004F582AC914DBFCFE /* Assets.swift */; };
+		CF59B219762512A23522B885 /* JSONHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B1BE98564A1F52C19860 /* JSONHelpers.swift */; };
 		CF59B3BACE182011B6759ABA /* SearchResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B484B0E23FCD82227A5F /* SearchResultItem.swift */; };
 		CF59B40D2E41B1CB8151DD11 /* ItemKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BE61974E437AA3EC754C /* ItemKind.swift */; };
 		CF59B599C50E8527FE51D567 /* MovieImageKindTransformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */; };
@@ -143,6 +144,7 @@
 
 /* Begin PBXFileReference section */
 		CF59B09C3E9D91B6CA046CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TraktSearcher/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		CF59B1BE98564A1F52C19860 /* JSONHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelpers.swift; sourceTree = "<group>"; };
 		CF59B32F7C11E4DC1047ED72 /* MoviesRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRequestType.swift; sourceTree = "<group>"; };
 		CF59B484B0E23FCD82227A5F /* SearchResultItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultItem.swift; sourceTree = "<group>"; };
 		CF59B4E09B1B9D2A80CA418D /* MovieImageKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieImageKind.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				CF59BA88A84877B5742EBB43 /* MovieTests.swift */,
 				CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */,
 				CF59B8F893D27F4E6B5729B5 /* SearchResultItemTests.swift */,
+				CF59B1BE98564A1F52C19860 /* JSONHelpers.swift */,
 			);
 			path = TracktSearchAPITests;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				CF59B9204C7E9289C5DA1ED4 /* MovieTests.swift in Sources */,
 				CF59B599C50E8527FE51D567 /* MovieImageKindTransformTests.swift in Sources */,
 				CF59B99F586F295C5975840C /* SearchResultItemTests.swift in Sources */,
+				CF59B219762512A23522B885 /* JSONHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

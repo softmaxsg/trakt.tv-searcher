@@ -12,28 +12,14 @@ import ObjectMapper
 
 class ImageUrlsTests: XCTestCase
 {
-    private static let jsonFullKey = "full"
-    private static let jsonMediumKey = "medium"
-    private static let jsonThumbKey = "thumb"
-
     func testMappingNormal()
     {
-        let fullUrl = "https://example.com/full.jpg"
-        let mediumUrl = "https://example.com/medium.jpg"
-        let thumbUrl = "https://example.com/thumb.jpg"
-
-        let dictionary = [
-            self.dynamicType.jsonFullKey: fullUrl,
-            self.dynamicType.jsonMediumKey: mediumUrl,
-            self.dynamicType.jsonThumbKey: thumbUrl,
-        ]
-
-        let imageUrls = Mapper<ImageUrls>().map(dictionary)
+        let imageUrls = Mapper<ImageUrls>().map(JSONHelpers.ImageUrls.defaultValue)
         XCTAssertNotNil(imageUrls)
 
-        XCTAssertEqual(imageUrls!.full!.absoluteString, fullUrl)
-        XCTAssertEqual(imageUrls!.medium!.absoluteString, mediumUrl)
-        XCTAssertEqual(imageUrls!.thumbnail!.absoluteString, thumbUrl)
+        XCTAssertEqual(imageUrls!.full!.absoluteString, JSONHelpers.ImageUrls.DefaultValues.full)
+        XCTAssertEqual(imageUrls!.medium!.absoluteString, JSONHelpers.ImageUrls.DefaultValues.medium)
+        XCTAssertEqual(imageUrls!.thumbnail!.absoluteString, JSONHelpers.ImageUrls.DefaultValues.thumbnail)
 
         XCTAssertTrue(imageUrls!.isValid())
     }
@@ -53,9 +39,9 @@ class ImageUrlsTests: XCTestCase
     func testMappingInvalidValues()
     {
         let dictionary = [
-            self.dynamicType.jsonFullKey: 0,
-            self.dynamicType.jsonMediumKey: 0,
-            self.dynamicType.jsonThumbKey: 0,
+            JSONHelpers.ImageUrls.Keys.full: JSONHelpers.InvalidValues.integer,
+            JSONHelpers.ImageUrls.Keys.medium: JSONHelpers.InvalidValues.integer,
+            JSONHelpers.ImageUrls.Keys.thumbnail: JSONHelpers.InvalidValues.integer,
         ]
 
         let imageUrls = Mapper<ImageUrls>().map(dictionary)
@@ -70,19 +56,15 @@ class ImageUrlsTests: XCTestCase
 
     func testIsValidTrue()
     {
-        let fullUrl = "https://example.com/full.jpg"
-        let mediumUrl = "https://example.com/medium.jpg"
-        let thumbUrl = "https://example.com/thumb.jpg"
-
         let validDictionaries = [
             [
-                self.dynamicType.jsonFullKey: fullUrl,
+                JSONHelpers.ImageUrls.Keys.full: JSONHelpers.ImageUrls.DefaultValues.full,
             ],
             [
-                self.dynamicType.jsonMediumKey: mediumUrl,
+                JSONHelpers.ImageUrls.Keys.medium: JSONHelpers.ImageUrls.DefaultValues.medium,
             ],
             [
-                self.dynamicType.jsonThumbKey: thumbUrl,
+                JSONHelpers.ImageUrls.Keys.thumbnail: JSONHelpers.ImageUrls.DefaultValues.thumbnail,
             ],
         ]
 

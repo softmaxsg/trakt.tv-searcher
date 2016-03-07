@@ -12,32 +12,15 @@ import ObjectMapper
 
 class PaginationInfoTests: XCTestCase
 {
-    private static let headerPageNumberKey = "x-pagination-page"
-    private static let headerPageSizeKey = "x-pagination-limit"
-    private static let headerItemsCountKey = "x-pagination-item-count"
-    private static let headerPagesCountKey = "x-pagination-page-count"
-
     func testMappingNormal()
     {
-        let pageNumber: UInt = 27
-        let pageSize: UInt = 30
-        let itemsCount: UInt = 123456
-        let pagesCount: UInt = 4116
-
-        let dictionary = [
-            self.dynamicType.headerPageNumberKey: String(pageNumber),
-            self.dynamicType.headerPageSizeKey: String(pageSize),
-            self.dynamicType.headerItemsCountKey: String(itemsCount),
-            self.dynamicType.headerPagesCountKey: String(pagesCount),
-        ]
-
-        let paginationInfo = Mapper<PaginationInfo>().map(dictionary)
+        let paginationInfo = Mapper<PaginationInfo>().map(JSONHelpers.PaginationInfo.defaultValue)
         XCTAssertNotNil(paginationInfo)
 
-        XCTAssertEqual(paginationInfo!.pageNumber!, pageNumber)
-        XCTAssertEqual(paginationInfo!.pageSize!, pageSize)
-        XCTAssertEqual(paginationInfo!.itemsCount!, itemsCount)
-        XCTAssertEqual(paginationInfo!.pagesCount!, pagesCount)
+        XCTAssertEqual(paginationInfo!.pageNumber!, JSONHelpers.PaginationInfo.DefaultValues.pageNumber)
+        XCTAssertEqual(paginationInfo!.pageSize!, JSONHelpers.PaginationInfo.DefaultValues.pageSize)
+        XCTAssertEqual(paginationInfo!.itemsCount!, JSONHelpers.PaginationInfo.DefaultValues.itemsCount)
+        XCTAssertEqual(paginationInfo!.pagesCount!, JSONHelpers.PaginationInfo.DefaultValues.pagesCount)
 
         XCTAssertTrue(paginationInfo!.isValid())
     }
@@ -58,10 +41,10 @@ class PaginationInfoTests: XCTestCase
     func testMappingInvalidValues()
     {
         let dictionary = [
-            self.dynamicType.headerPageNumberKey: "invalid",
-            self.dynamicType.headerPageSizeKey: "invalid",
-            self.dynamicType.headerItemsCountKey: "invalid",
-            self.dynamicType.headerPagesCountKey: "invalid",
+            JSONHelpers.PaginationInfo.Keys.pageNumber: JSONHelpers.InvalidValues.string,
+            JSONHelpers.PaginationInfo.Keys.pageSize: JSONHelpers.InvalidValues.string,
+            JSONHelpers.PaginationInfo.Keys.itemsCount: JSONHelpers.InvalidValues.string,
+            JSONHelpers.PaginationInfo.Keys.pagesCount: JSONHelpers.InvalidValues.string,
         ]
 
         let paginationInfo = Mapper<PaginationInfo>().map(dictionary)
@@ -78,8 +61,8 @@ class PaginationInfoTests: XCTestCase
     func testIsValidTrue()
     {
         let validDictionary = [
-            self.dynamicType.headerPageNumberKey: "1",
-            self.dynamicType.headerPageSizeKey: "1",
+            JSONHelpers.PaginationInfo.Keys.pageNumber: String(JSONHelpers.PaginationInfo.DefaultValues.pageNumber),
+            JSONHelpers.PaginationInfo.Keys.pageSize: String(JSONHelpers.PaginationInfo.DefaultValues.pageSize),
         ]
 
         let paginationInfo = Mapper<PaginationInfo>().map(validDictionary)
@@ -91,22 +74,18 @@ class PaginationInfoTests: XCTestCase
     {
         let invalidDictionaries = [
             [
-                self.dynamicType.headerPageNumberKey: "0",
-                self.dynamicType.headerPageSizeKey: "0",
+                JSONHelpers.PaginationInfo.Keys.pageNumber: String(JSONHelpers.InvalidValues.integer),
+                JSONHelpers.PaginationInfo.Keys.pageSize: String(JSONHelpers.PaginationInfo.DefaultValues.pageSize),
             ],
             [
-                self.dynamicType.headerPageNumberKey: "0",
-                self.dynamicType.headerPageSizeKey: "1",
+                JSONHelpers.PaginationInfo.Keys.pageNumber: String(JSONHelpers.PaginationInfo.DefaultValues.pageNumber),
+                JSONHelpers.PaginationInfo.Keys.pageSize: String(JSONHelpers.InvalidValues.integer),
             ],
             [
-                self.dynamicType.headerPageNumberKey: "1",
-                self.dynamicType.headerPageSizeKey: "0",
+                JSONHelpers.PaginationInfo.Keys.pageSize: String(JSONHelpers.InvalidValues.integer),
             ],
             [
-                self.dynamicType.headerPageSizeKey: "1",
-            ],
-            [
-                self.dynamicType.headerPageNumberKey: "1",
+                JSONHelpers.PaginationInfo.Keys.pageNumber: String(JSONHelpers.InvalidValues.integer),
             ],
         ]
 
