@@ -25,9 +25,9 @@ public struct ImageUrls: Mappable, Validable
     // MARK: Mappable
     mutating public func mapping(map: Map)
     {
-        self.full <- (map[ImageUrls.jsonFullKey], URLTransform())
-        self.medium <- (map[ImageUrls.jsonMediumKey], URLTransform())
-        self.thumbnail <- (map[ImageUrls.jsonThumbKey], URLTransform())
+        self.full <- (map[self.dynamicType.jsonFullKey], URLTransform())
+        self.medium <- (map[self.dynamicType.jsonMediumKey], URLTransform())
+        self.thumbnail <- (map[self.dynamicType.jsonThumbKey], URLTransform())
     }
 
     // MARK: Validable

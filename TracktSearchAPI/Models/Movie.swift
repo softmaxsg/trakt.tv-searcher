@@ -27,10 +27,10 @@ public struct Movie: TraktItem
     // MARK: Mappable
     mutating public func mapping(map: Map)
     {
-        self.title     <- map[Movie.jsonTitleKey]
-        self.overview  <- map[Movie.jsonOverviewKey]
-        self.year      <- map[Movie.jsonYearKey]
-        self.images    <- (map[Movie.jsonImagesKey], MovieImageKindTransform())
+        self.title     <- map[self.dynamicType.jsonTitleKey]
+        self.overview  <- map[self.dynamicType.jsonOverviewKey]
+        self.year      <- map[self.dynamicType.jsonYearKey]
+        self.images    <- (map[self.dynamicType.jsonImagesKey], MovieImageKindTransform())
     }
 
     // MARK: Validable

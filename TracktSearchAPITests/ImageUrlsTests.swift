@@ -23,9 +23,9 @@ class ImageUrlsTests: XCTestCase
         let thumbUrl = "https://example.com/thumb.jpg"
 
         let dictionary = [
-            ImageUrlsTests.jsonFullKey: fullUrl,
-            ImageUrlsTests.jsonMediumKey: mediumUrl,
-            ImageUrlsTests.jsonThumbKey: thumbUrl,
+            self.dynamicType.jsonFullKey: fullUrl,
+            self.dynamicType.jsonMediumKey: mediumUrl,
+            self.dynamicType.jsonThumbKey: thumbUrl,
         ]
 
         let imageUrls = Mapper<ImageUrls>().map(dictionary)
@@ -53,9 +53,9 @@ class ImageUrlsTests: XCTestCase
     func testMappingInvalidValues()
     {
         let dictionary = [
-            ImageUrlsTests.jsonFullKey: 0,
-            ImageUrlsTests.jsonMediumKey: 0,
-            ImageUrlsTests.jsonThumbKey: 0,
+            self.dynamicType.jsonFullKey: 0,
+            self.dynamicType.jsonMediumKey: 0,
+            self.dynamicType.jsonThumbKey: 0,
         ]
 
         let imageUrls = Mapper<ImageUrls>().map(dictionary)
@@ -76,13 +76,13 @@ class ImageUrlsTests: XCTestCase
 
         let validDictionaries = [
             [
-                ImageUrlsTests.jsonFullKey: fullUrl,
+                self.dynamicType.jsonFullKey: fullUrl,
             ],
             [
-                ImageUrlsTests.jsonMediumKey: mediumUrl,
+                self.dynamicType.jsonMediumKey: mediumUrl,
             ],
             [
-                ImageUrlsTests.jsonThumbKey: thumbUrl,
+                self.dynamicType.jsonThumbKey: thumbUrl,
             ],
         ]
 

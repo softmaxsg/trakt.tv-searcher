@@ -36,8 +36,8 @@ public struct SearchResultItem: Mappable, Validable
 
     mutating public func mapping(map: Map)
     {
-        self.kind   <- map[SearchResultItem.jsonKindKey]
-        self.score  <- map[SearchResultItem.jsonScoreKey]
+        self.kind   <- map[self.dynamicType.jsonKindKey]
+        self.score  <- map[self.dynamicType.jsonScoreKey]
 
         if let kind = self.kind {
             switch kind {

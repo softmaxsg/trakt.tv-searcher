@@ -23,17 +23,17 @@ class SearchResultItemTests: XCTestCase
     func testMappingNormal()
     {
         let movieDictionary = [
-            SearchResultItemTests.jsonTitleKey: "Title",
-            SearchResultItemTests.jsonOverviewKey: "Overview",
-            SearchResultItemTests.jsonYearKey: 2016,
+            self.dynamicType.jsonTitleKey: "Title",
+            self.dynamicType.jsonOverviewKey: "Overview",
+            self.dynamicType.jsonYearKey: 2016,
         ]
 
         let score = 123.456
 
         let dictionary = [
-            SearchResultItemTests.jsonTypeKey: "movie",
-            SearchResultItemTests.jsonScoreKey: score,
-            SearchResultItemTests.jsonMovieKey: movieDictionary,
+            self.dynamicType.jsonTypeKey: "movie",
+            self.dynamicType.jsonScoreKey: score,
+            self.dynamicType.jsonMovieKey: movieDictionary,
         ]
 
         let resultItem = Mapper<SearchResultItem>().map(dictionary)
@@ -63,9 +63,9 @@ class SearchResultItemTests: XCTestCase
     func testMappingInvalidValues()
     {
         let dictionary = [
-            SearchResultItemTests.jsonTypeKey: "invalid",
-            SearchResultItemTests.jsonScoreKey: "invalid",
-            SearchResultItemTests.jsonMovieKey: "invalid",
+            self.dynamicType.jsonTypeKey: "invalid",
+            self.dynamicType.jsonScoreKey: "invalid",
+            self.dynamicType.jsonMovieKey: "invalid",
         ]
 
         let resultItem = Mapper<SearchResultItem>().map(dictionary)
@@ -81,14 +81,14 @@ class SearchResultItemTests: XCTestCase
     func testIsValidTrue()
     {
         let movieDictionary = [
-            SearchResultItemTests.jsonTitleKey: "Title",
-            SearchResultItemTests.jsonOverviewKey: "Overview",
-            SearchResultItemTests.jsonYearKey: 2016,
+            self.dynamicType.jsonTitleKey: "Title",
+            self.dynamicType.jsonOverviewKey: "Overview",
+            self.dynamicType.jsonYearKey: 2016,
         ]
 
         let dictionary = [
-            SearchResultItemTests.jsonTypeKey: "movie",
-            SearchResultItemTests.jsonMovieKey: movieDictionary,
+            self.dynamicType.jsonTypeKey: "movie",
+            self.dynamicType.jsonMovieKey: movieDictionary,
         ]
 
         let resultItem = Mapper<SearchResultItem>().map(dictionary)
@@ -99,25 +99,25 @@ class SearchResultItemTests: XCTestCase
     func testIsValidFalse()
     {
         let movieDictionary = [
-            SearchResultItemTests.jsonTitleKey: "Title",
-            SearchResultItemTests.jsonOverviewKey: "Overview",
-            SearchResultItemTests.jsonYearKey: 2016,
+            self.dynamicType.jsonTitleKey: "Title",
+            self.dynamicType.jsonOverviewKey: "Overview",
+            self.dynamicType.jsonYearKey: 2016,
         ]
 
         let invalidDictionaries = [
             [
-                SearchResultItemTests.jsonTypeKey: "invalid",
-                SearchResultItemTests.jsonMovieKey: movieDictionary,
+                self.dynamicType.jsonTypeKey: "invalid",
+                self.dynamicType.jsonMovieKey: movieDictionary,
             ],
             [
-                SearchResultItemTests.jsonTypeKey: "movie",
-                SearchResultItemTests.jsonMovieKey: "invalid",
+                self.dynamicType.jsonTypeKey: "movie",
+                self.dynamicType.jsonMovieKey: "invalid",
             ],
             [
-                SearchResultItemTests.jsonMovieKey: movieDictionary,
+                self.dynamicType.jsonMovieKey: movieDictionary,
             ],
             [
-                SearchResultItemTests.jsonTypeKey: "movie",
+                self.dynamicType.jsonTypeKey: "movie",
             ],
         ]
 

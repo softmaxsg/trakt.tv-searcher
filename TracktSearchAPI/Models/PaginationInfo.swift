@@ -30,10 +30,10 @@ public struct PaginationInfo: Mappable, Validable
 
     mutating public func mapping(map: Map)
     {
-        self.pageNumber <- (map[PaginationInfo.headerPageNumberKey], self.uintTransformer)
-        self.pageSize   <- (map[PaginationInfo.headerPageSizeKey], self.uintTransformer)
-        self.itemsCount <- (map[PaginationInfo.headerItemsCountKey], self.uintTransformer)
-        self.pagesCount <- (map[PaginationInfo.headerPagesCountKey], self.uintTransformer)
+        self.pageNumber <- (map[self.dynamicType.headerPageNumberKey], self.uintTransformer)
+        self.pageSize   <- (map[self.dynamicType.headerPageSizeKey], self.uintTransformer)
+        self.itemsCount <- (map[self.dynamicType.headerItemsCountKey], self.uintTransformer)
+        self.pagesCount <- (map[self.dynamicType.headerPagesCountKey], self.uintTransformer)
     }
 
     // MARK: Validable

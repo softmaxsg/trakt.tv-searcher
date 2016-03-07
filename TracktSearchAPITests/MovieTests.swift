@@ -28,9 +28,9 @@ class MovieTests: XCTestCase
         let movieYear: UInt = 2016
 
         let imageUrls = [
-            MovieTests.jsonFullKey: "https://example.com/full.jpg",
-            MovieTests.jsonMediumKey: "https://example.com/medium.jpg",
-            MovieTests.jsonThumbKey: "https://example.com/thumb.jpg",
+            self.dynamicType.jsonFullKey: "https://example.com/full.jpg",
+            self.dynamicType.jsonMediumKey: "https://example.com/medium.jpg",
+            self.dynamicType.jsonThumbKey: "https://example.com/thumb.jpg",
         ]
 
         let movieImages = [
@@ -43,10 +43,10 @@ class MovieTests: XCTestCase
         ]
 
         let dictionary = [
-            MovieTests.jsonTitleKey: movieTitle,
-            MovieTests.jsonOverviewKey: movieOverview,
-            MovieTests.jsonYearKey: movieYear,
-            MovieTests.jsonImagesKey: movieImages,
+            self.dynamicType.jsonTitleKey: movieTitle,
+            self.dynamicType.jsonOverviewKey: movieOverview,
+            self.dynamicType.jsonYearKey: movieYear,
+            self.dynamicType.jsonImagesKey: movieImages,
         ]
 
         let movie = Mapper<Movie>().map(dictionary)
@@ -82,10 +82,10 @@ class MovieTests: XCTestCase
     func testMappingInvalidValues()
     {
         let dictionary = [
-            MovieTests.jsonTitleKey: 0,
-            MovieTests.jsonOverviewKey: 0,
-            MovieTests.jsonYearKey: "invalid",
-            MovieTests.jsonImagesKey: "invalid",
+            self.dynamicType.jsonTitleKey: 0,
+            self.dynamicType.jsonOverviewKey: 0,
+            self.dynamicType.jsonYearKey: "invalid",
+            self.dynamicType.jsonImagesKey: "invalid",
         ]
 
         let movie = Mapper<Movie>().map(dictionary)
@@ -102,8 +102,8 @@ class MovieTests: XCTestCase
     func testIsValidTrue()
     {
         let dictionary = [
-            MovieTests.jsonTitleKey: "Title",
-            MovieTests.jsonYearKey: 2016,
+            self.dynamicType.jsonTitleKey: "Title",
+            self.dynamicType.jsonYearKey: 2016,
         ]
 
         let movie = Mapper<Movie>().map(dictionary)
@@ -115,26 +115,26 @@ class MovieTests: XCTestCase
     {
         let invalidDictionaries = [
             [
-                MovieTests.jsonTitleKey: 0,
-                MovieTests.jsonYearKey: "invalid",
+                self.dynamicType.jsonTitleKey: 0,
+                self.dynamicType.jsonYearKey: "invalid",
             ],
             [
-                MovieTests.jsonTitleKey: "Title",
+                self.dynamicType.jsonTitleKey: "Title",
             ],
             [
-                MovieTests.jsonYearKey: 2016,
+                self.dynamicType.jsonYearKey: 2016,
             ],
             [
-                MovieTests.jsonTitleKey: 0,
-                MovieTests.jsonYearKey: 2016,
+                self.dynamicType.jsonTitleKey: 0,
+                self.dynamicType.jsonYearKey: 2016,
             ],
             [
-                MovieTests.jsonTitleKey: "Title",
-                MovieTests.jsonYearKey: "invalid",
+                self.dynamicType.jsonTitleKey: "Title",
+                self.dynamicType.jsonYearKey: "invalid",
             ],
             [
-                MovieTests.jsonTitleKey: "Title",
-                MovieTests.jsonYearKey: 0,
+                self.dynamicType.jsonTitleKey: "Title",
+                self.dynamicType.jsonYearKey: 0,
             ],
         ]
 

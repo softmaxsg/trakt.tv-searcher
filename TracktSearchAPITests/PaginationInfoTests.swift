@@ -25,10 +25,10 @@ class PaginationInfoTests: XCTestCase
         let pagesCount: UInt = 4116
 
         let dictionary = [
-            PaginationInfoTests.headerPageNumberKey: String(pageNumber),
-            PaginationInfoTests.headerPageSizeKey: String(pageSize),
-            PaginationInfoTests.headerItemsCountKey: String(itemsCount),
-            PaginationInfoTests.headerPagesCountKey: String(pagesCount),
+            self.dynamicType.headerPageNumberKey: String(pageNumber),
+            self.dynamicType.headerPageSizeKey: String(pageSize),
+            self.dynamicType.headerItemsCountKey: String(itemsCount),
+            self.dynamicType.headerPagesCountKey: String(pagesCount),
         ]
 
         let paginationInfo = Mapper<PaginationInfo>().map(dictionary)
@@ -58,10 +58,10 @@ class PaginationInfoTests: XCTestCase
     func testMappingInvalidValues()
     {
         let dictionary = [
-            PaginationInfoTests.headerPageNumberKey: "invalid",
-            PaginationInfoTests.headerPageSizeKey: "invalid",
-            PaginationInfoTests.headerItemsCountKey: "invalid",
-            PaginationInfoTests.headerPagesCountKey: "invalid",
+            self.dynamicType.headerPageNumberKey: "invalid",
+            self.dynamicType.headerPageSizeKey: "invalid",
+            self.dynamicType.headerItemsCountKey: "invalid",
+            self.dynamicType.headerPagesCountKey: "invalid",
         ]
 
         let paginationInfo = Mapper<PaginationInfo>().map(dictionary)
@@ -78,8 +78,8 @@ class PaginationInfoTests: XCTestCase
     func testIsValidTrue()
     {
         let validDictionary = [
-            PaginationInfoTests.headerPageNumberKey: "1",
-            PaginationInfoTests.headerPageSizeKey: "1",
+            self.dynamicType.headerPageNumberKey: "1",
+            self.dynamicType.headerPageSizeKey: "1",
         ]
 
         let paginationInfo = Mapper<PaginationInfo>().map(validDictionary)
@@ -91,22 +91,22 @@ class PaginationInfoTests: XCTestCase
     {
         let invalidDictionaries = [
             [
-                PaginationInfoTests.headerPageNumberKey: "0",
-                PaginationInfoTests.headerPageSizeKey: "0",
+                self.dynamicType.headerPageNumberKey: "0",
+                self.dynamicType.headerPageSizeKey: "0",
             ],
             [
-                PaginationInfoTests.headerPageNumberKey: "0",
-                PaginationInfoTests.headerPageSizeKey: "1",
+                self.dynamicType.headerPageNumberKey: "0",
+                self.dynamicType.headerPageSizeKey: "1",
             ],
             [
-                PaginationInfoTests.headerPageNumberKey: "1",
-                PaginationInfoTests.headerPageSizeKey: "0",
+                self.dynamicType.headerPageNumberKey: "1",
+                self.dynamicType.headerPageSizeKey: "0",
             ],
             [
-                PaginationInfoTests.headerPageSizeKey: "1",
+                self.dynamicType.headerPageSizeKey: "1",
             ],
             [
-                PaginationInfoTests.headerPageNumberKey: "1",
+                self.dynamicType.headerPageNumberKey: "1",
             ],
         ]
 

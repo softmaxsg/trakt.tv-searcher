@@ -27,9 +27,9 @@ class MovieImageKindTransformTests: XCTestCase
     func testFromJSONNormal()
     {
         let imageUrls = [
-            MovieImageKindTransformTests.jsonFullKey: "https://example.com/full.jpg",
-            MovieImageKindTransformTests.jsonMediumKey: "https://example.com/medium.jpg",
-            MovieImageKindTransformTests.jsonThumbKey: "https://example.com/thumb.jpg",
+            self.dynamicType.jsonFullKey: "https://example.com/full.jpg",
+            self.dynamicType.jsonMediumKey: "https://example.com/medium.jpg",
+            self.dynamicType.jsonThumbKey: "https://example.com/thumb.jpg",
         ]
 
         let dictionary = [
@@ -69,7 +69,7 @@ class MovieImageKindTransformTests: XCTestCase
         let invalidDictinoaries = [
             [
                 "invalid": [
-                    MovieImageKindTransformTests.jsonFullKey: "https://example.com/full.jpg"
+                    self.dynamicType.jsonFullKey: "https://example.com/full.jpg"
                 ],
             ],
             [
