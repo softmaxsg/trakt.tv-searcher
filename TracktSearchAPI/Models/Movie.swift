@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-public struct Movie: Mappable, Validable
+public struct Movie: TraktItem
 {
     private static let jsonTitleKey = "title"
     private static let jsonOverviewKey = "overview"
