@@ -8,8 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		CF59B1A147AB0C143EA2F2D9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BA004F582AC914DBFCFE /* Assets.swift */; };
+		CF59B599C50E8527FE51D567 /* MovieImageKindTransformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */; };
 		CF59B605A7B8F5B0E6C0C38D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BDBFDC6E4E4865B2558C /* MainViewController.swift */; };
 		CF59B6EB83544068EDE635CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF59BF1CF729D1B3E5480CA3 /* Assets.xcassets */; };
+		CF59B9204C7E9289C5DA1ED4 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BA88A84877B5742EBB43 /* MovieTests.swift */; };
+		CF59B94DF2FCB34CF6695705 /* ImageUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BFA6BDC02DEFA2F6E2BC /* ImageUrls.swift */; };
+		CF59B9E16E5345D9B942DBF8 /* ImageUrlsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BD2FCFF8C9AD30BB55ED /* ImageUrlsTests.swift */; };
+		CF59BB56BD3E1A4781E5D71C /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BEBDC782616D8773AC6A /* MoviesResponse.swift */; };
+		CF59BC0B3D748D1215055F59 /* MovieImageKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B4E09B1B9D2A80CA418D /* MovieImageKind.swift */; };
+		CF59BD456B58B8E0732079B7 /* Validable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B90F9F4C79F64600DB17 /* Validable.swift */; };
+		CF59BEC24C1067BF92F9BD2C /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B53487855E5D9380EA50 /* PaginationInfo.swift */; };
+		CF59BFAF6BB17AE13B62364C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BDA24082057C5C7C8C2A /* Movie.swift */; };
 		CF59BFF07FDE71822E0BDFC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59B67C1CAC157B52055278 /* LaunchScreen.storyboard */; };
 		D8C294611C8C4A55001B2AD4 /* AssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */; };
 		D8C2946C1C8C517F001B2AD4 /* TracktSearchAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = D8C2946B1C8C517F001B2AD4 /* TracktSearchAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,8 +28,20 @@
 		D8C294881C8C55F2001B2AD4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; };
 		D8C2948A1C8C56EA001B2AD4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; };
 		D8C2948B1C8C56EA001B2AD4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8C294961C8C7DF8001B2AD4 /* TracktSearchAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294691C8C517F001B2AD4 /* TracktSearchAPI.framework */; };
+		D8C294A11C8C82F1001B2AD4 /* Alamofire.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8C294A31C8C8D7A001B2AD4 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; };
+		D8C294A41C8C8D91001B2AD4 /* ObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8C294A61C8C909B001B2AD4 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */; };
+		D8C294A71C8C90A6001B2AD4 /* AlamofireObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8C294AA1C8D7E59001B2AD4 /* PaginationInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C294A91C8D7E59001B2AD4 /* PaginationInfoTests.swift */; };
+		D8C294AB1C8D8031001B2AD4 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; };
+		D8C294AD1C8D8054001B2AD4 /* ObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8C294AE1C8D8148001B2AD4 /* AlamofireObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8C294AF1C8D8149001B2AD4 /* Alamofire.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8C294B31C8DE8EF001B2AD4 /* AlamofireObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8C294B41C8DE8F0001B2AD4 /* ObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8C294B51C8DE8F0001B2AD4 /* Alamofire.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8D1619E1C8C333B0079F89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1619D1C8C333B0079F89D /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +61,13 @@
 			remoteInfo = TraktSearcher;
 		};
 		D8C2947C1C8C517F001B2AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8D161921C8C333B0079F89D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8C294681C8C517F001B2AD4;
+			remoteInfo = TracktSearchAPI;
+		};
+		D8C294971C8C7DF8001B2AD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D8D161921C8C333B0079F89D /* Project object */;
 			proxyType = 1;
@@ -68,16 +96,66 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8C294A01C8C82D0001B2AD4 /* Copy Frameworks Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8C294A71C8C90A6001B2AD4 /* AlamofireObjectMapper.framework in Copy Frameworks Files */,
+				D8C294A41C8C8D91001B2AD4 /* ObjectMapper.framework in Copy Frameworks Files */,
+				D8C294A11C8C82F1001B2AD4 /* Alamofire.framework in Copy Frameworks Files */,
+			);
+			name = "Copy Frameworks Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8C294AC1C8D8043001B2AD4 /* Copy Frameworks Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8C294AE1C8D8148001B2AD4 /* AlamofireObjectMapper.framework in Copy Frameworks Files */,
+				D8C294AF1C8D8149001B2AD4 /* Alamofire.framework in Copy Frameworks Files */,
+				D8C294AD1C8D8054001B2AD4 /* ObjectMapper.framework in Copy Frameworks Files */,
+			);
+			name = "Copy Frameworks Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8C294B21C8DE8E2001B2AD4 /* Copy Frameworks Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8C294B31C8DE8EF001B2AD4 /* AlamofireObjectMapper.framework in Copy Frameworks Files */,
+				D8C294B41C8DE8F0001B2AD4 /* ObjectMapper.framework in Copy Frameworks Files */,
+				D8C294B51C8DE8F0001B2AD4 /* Alamofire.framework in Copy Frameworks Files */,
+			);
+			name = "Copy Frameworks Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CF59B09C3E9D91B6CA046CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TraktSearcher/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		CF59B32F7C11E4DC1047ED72 /* MoviesRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRequestType.swift; sourceTree = "<group>"; };
+		CF59B4E09B1B9D2A80CA418D /* MovieImageKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieImageKind.swift; sourceTree = "<group>"; };
+		CF59B53487855E5D9380EA50 /* PaginationInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationInfo.swift; sourceTree = "<group>"; };
 		CF59B664374928EC808C11D4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CF59B66B37E7D5E26A3F2BF6 /* TracktSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracktSearchAPI.swift; sourceTree = "<group>"; };
+		CF59B90F9F4C79F64600DB17 /* Validable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validable.swift; sourceTree = "<group>"; };
 		CF59BA004F582AC914DBFCFE /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		CF59BA88A84877B5742EBB43 /* MovieTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		CF59BD1629362C7623959A70 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		CF59BD2FCFF8C9AD30BB55ED /* ImageUrlsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrlsTests.swift; sourceTree = "<group>"; };
+		CF59BDA24082057C5C7C8C2A /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CF59BDBFDC6E4E4865B2558C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieImageKindTransformTests.swift; sourceTree = "<group>"; };
 		CF59BE86DF97B1A666267FC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CF59BEBDC782616D8773AC6A /* MoviesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 		CF59BF1CF729D1B3E5480CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF59BFA6BDC02DEFA2F6E2BC /* ImageUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrls.swift; sourceTree = "<group>"; };
 		D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearcherTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
 		D8C294691C8C517F001B2AD4 /* TracktSearchAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TracktSearchAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +168,8 @@
 		D8C294951C8C7DF8001B2AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		D8C294A81C8D7E59001B2AD4 /* TracktSearchAPITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TracktSearchAPITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8C294A91C8D7E59001B2AD4 /* PaginationInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationInfoTests.swift; sourceTree = "<group>"; };
 		D8D1619A1C8C333B0079F89D /* TraktSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1619D1C8C333B0079F89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D161A91C8C333B0079F89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C294AB1C8D8031001B2AD4 /* ObjectMapper.framework in Frameworks */,
 				D8C294731C8C517F001B2AD4 /* TracktSearchAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +232,19 @@
 			path = "Views & Controllers";
 			sourceTree = "<group>";
 		};
+		CF59BA798976827069D95464 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF59B53487855E5D9380EA50 /* PaginationInfo.swift */,
+				CF59BDA24082057C5C7C8C2A /* Movie.swift */,
+				CF59B90F9F4C79F64600DB17 /* Validable.swift */,
+				CF59BEBDC782616D8773AC6A /* MoviesResponse.swift */,
+				CF59BFA6BDC02DEFA2F6E2BC /* ImageUrls.swift */,
+				CF59B4E09B1B9D2A80CA418D /* MovieImageKind.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CF59BFC15A46E5ED3AE620D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +260,7 @@
 			children = (
 				D8C2946B1C8C517F001B2AD4 /* TracktSearchAPI.h */,
 				D8C2946D1C8C517F001B2AD4 /* Info.plist */,
+				CF59BA798976827069D95464 /* Models */,
 			);
 			path = TracktSearchAPI;
 			sourceTree = "<group>";
@@ -174,6 +269,11 @@
 			isa = PBXGroup;
 			children = (
 				D8C2947B1C8C517F001B2AD4 /* Info.plist */,
+				D8C294A91C8D7E59001B2AD4 /* PaginationInfoTests.swift */,
+				D8C294A81C8D7E59001B2AD4 /* TracktSearchAPITests-Bridging-Header.h */,
+				CF59BD2FCFF8C9AD30BB55ED /* ImageUrlsTests.swift */,
+				CF59BA88A84877B5742EBB43 /* MovieTests.swift */,
+				CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */,
 			);
 			path = TracktSearchAPITests;
 			sourceTree = "<group>";
@@ -267,6 +367,7 @@
 				D8C294651C8C517F001B2AD4 /* Frameworks */,
 				D8C294661C8C517F001B2AD4 /* Headers */,
 				D8C294671C8C517F001B2AD4 /* Resources */,
+				D8C294B21C8DE8E2001B2AD4 /* Copy Frameworks Files */,
 			);
 			buildRules = (
 			);
@@ -284,6 +385,7 @@
 				D8C2946E1C8C517F001B2AD4 /* Sources */,
 				D8C2946F1C8C517F001B2AD4 /* Frameworks */,
 				D8C294701C8C517F001B2AD4 /* Resources */,
+				D8C294AC1C8D8043001B2AD4 /* Copy Frameworks Files */,
 			);
 			buildRules = (
 			);
@@ -303,6 +405,7 @@
 				D8C2948D1C8C7DF8001B2AD4 /* Sources */,
 				D8C2948E1C8C7DF8001B2AD4 /* Frameworks */,
 				D8C2948F1C8C7DF8001B2AD4 /* Resources */,
+				D8C294A01C8C82D0001B2AD4 /* Copy Frameworks Files */,
 			);
 			buildRules = (
 			);
@@ -416,6 +519,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8C2948F1C8C7DF8001B2AD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D8D161981C8C333B0079F89D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,6 +549,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF59BEC24C1067BF92F9BD2C /* PaginationInfo.swift in Sources */,
+				CF59BFAF6BB17AE13B62364C /* Movie.swift in Sources */,
+				CF59BD456B58B8E0732079B7 /* Validable.swift in Sources */,
+				CF59BB56BD3E1A4781E5D71C /* MoviesResponse.swift in Sources */,
+				CF59B94DF2FCB34CF6695705 /* ImageUrls.swift in Sources */,
+				CF59BC0B3D748D1215055F59 /* MovieImageKind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +562,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C294AA1C8D7E59001B2AD4 /* PaginationInfoTests.swift in Sources */,
+				CF59B9E16E5345D9B942DBF8 /* ImageUrlsTests.swift in Sources */,
+				CF59B9204C7E9289C5DA1ED4 /* MovieTests.swift in Sources */,
+				CF59B599C50E8527FE51D567 /* MovieImageKindTransformTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,20 +689,33 @@
 		D8C294821C8C5180001B2AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TracktSearchAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TracktSearchAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TracktSearchAPITests/TracktSearchAPITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D8C294831C8C5180001B2AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TracktSearchAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TracktSearchAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TracktSearchAPITests/TracktSearchAPITests-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -778,6 +911,7 @@
 				D8C2949A1C8C7DF8001B2AD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D161951C8C333B0079F89D /* Build configuration list for PBXProject "TraktSearcher" */ = {
 			isa = XCConfigurationList;
