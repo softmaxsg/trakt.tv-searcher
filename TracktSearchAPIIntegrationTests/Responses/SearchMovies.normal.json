@@ -1,0 +1,542 @@
+[
+  {
+    "type": "movie",
+    "score": 75.34479,
+    "movie": {
+      "title": "Batman",
+      "overview": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker, who has seized control of Gotham's underworld.",
+      "year": 1989,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/000/224/posters/original/8a5816fc0b.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/224/posters/medium/8a5816fc0b.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/224/posters/thumb/8a5816fc0b.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/000/224/fanarts/original/cbc5557201.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/224/fanarts/medium/cbc5557201.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/224/fanarts/thumb/cbc5557201.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 224,
+        "slug": "batman-1989",
+        "imdb": "tt0096895",
+        "tmdb": 268
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 75.34479,
+    "movie": {
+      "title": "Batman",
+      "overview": "The Dynamic Duo faces four super-villains who plan to hold the world for ransom with the help of a secret invention that instantly dehydrates people.",
+      "year": 1966,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/001/794/posters/original/4a4f6031b0.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/001/794/posters/medium/4a4f6031b0.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/001/794/posters/thumb/4a4f6031b0.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/001/794/fanarts/original/493d7c70a3.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/001/794/fanarts/medium/493d7c70a3.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/001/794/fanarts/thumb/493d7c70a3.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 1794,
+        "slug": "batman-1966",
+        "imdb": "tt0060153",
+        "tmdb": 2661
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 75.34479,
+    "movie": {
+      "title": "Batman",
+      "overview": "Japanese spymaster Prince Daka operates a covert espionage organization located in Metropolis' now-deserted Little Tokyo which turns American scientists into pliable zombies.",
+      "year": 1943,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/086/131/posters/original/420606ea51.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/086/131/posters/medium/420606ea51.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/086/131/posters/thumb/420606ea51.jpg"
+        },
+        "fanart": {
+          "full": null,
+          "medium": null,
+          "thumb": null
+        }
+      },
+      "ids": {
+        "trakt": 86131,
+        "slug": "batman-1943",
+        "imdb": "tt0035665",
+        "tmdb": 125249
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 60.887783,
+    "movie": {
+      "title": "Batman: Beyond Batman",
+      "overview": "Behind the scenes documentary highlighting production design, props &amp; gadgets, batmobile/batsuit design, and the music of the 1989 Batman.",
+      "year": 2005,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/127/327/posters/original/893d22eca2.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/127/327/posters/medium/893d22eca2.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/127/327/posters/thumb/893d22eca2.jpg"
+        },
+        "fanart": {
+          "full": null,
+          "medium": null,
+          "thumb": null
+        }
+      },
+      "ids": {
+        "trakt": 127327,
+        "slug": "batman-beyond-batman-2005",
+        "imdb": "tt1006835",
+        "tmdb": 204649
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 53.817707,
+    "movie": {
+      "title": "Batman Begins",
+      "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+      "year": 2005,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/000/228/posters/original/0b13139416.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/228/posters/medium/0b13139416.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/228/posters/thumb/0b13139416.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/000/228/fanarts/original/f2ddeff0d8.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/228/fanarts/medium/f2ddeff0d8.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/228/fanarts/thumb/f2ddeff0d8.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 228,
+        "slug": "batman-begins-2005",
+        "imdb": "tt0372784",
+        "tmdb": 272
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 53.817707,
+    "movie": {
+      "title": "Batman Returns",
+      "overview": "Having defeated the Joker, Batman now faces the Penguin - a warped and deformed individual who is intent on being accepted into Gotham society. Crooked businessman Max Schreck is coerced into helping him become Mayor of Gotham and they both attempt to expose Batman in a different light. Selina Kyle, Max's secretary, is thrown from the top of a building and is transformed into Catwoman - a mysterious figure who has the same personality disorder as Batman. Batman must attempt to clear his name, all the time deciding just what must be done with the Catwoman.",
+      "year": 1992,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/000/300/posters/original/a53f52cd12.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/300/posters/medium/a53f52cd12.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/300/posters/thumb/a53f52cd12.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/000/300/fanarts/original/08a7437313.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/300/fanarts/medium/08a7437313.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/300/fanarts/thumb/08a7437313.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 300,
+        "slug": "batman-returns-1992",
+        "imdb": "tt0103776",
+        "tmdb": 364
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 53.817707,
+    "movie": {
+      "title": "Batman Forever",
+      "overview": "The Dark Knight of Gotham City confronts a dastardly duo: Two-Face and the Riddler. Formerly District Attorney Harvey Dent, Two-Face believes Batman caused the courtroom accident which left him disfigured on one side. And Edward Nygma, computer-genius and former employee of millionaire Bruce Wayne, is out to get the philanthropist; as The Riddler. Former circus acrobat Dick Grayson, his family killed by Two-Face, becomes Wayne's ward and Batman's new partner Robin.",
+      "year": 1995,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/000/330/posters/original/d74beba963.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/330/posters/medium/d74beba963.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/330/posters/thumb/d74beba963.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/000/330/fanarts/original/4ea5f67242.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/330/fanarts/medium/4ea5f67242.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/330/fanarts/thumb/4ea5f67242.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 330,
+        "slug": "batman-forever-1995",
+        "imdb": "tt0112462",
+        "tmdb": 414
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 53.817707,
+    "movie": {
+      "title": "Batman & Robin",
+      "overview": "Along with crime-fighting partner Robin and new recruit Batgirl, Batman battles the dual threat of frosty genius Mr. Freeze and homicidal horticulturalist Poison Ivy. Freeze plans to put Gotham City on ice, while Ivy tries to drive a wedge between the dynamic duo.",
+      "year": 1997,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/000/331/posters/original/7fe7617752.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/331/posters/medium/7fe7617752.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/331/posters/thumb/7fe7617752.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/000/331/fanarts/original/82f6c0da72.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/000/331/fanarts/medium/82f6c0da72.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/000/331/fanarts/thumb/82f6c0da72.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 331,
+        "slug": "batman-robin-1997",
+        "imdb": "tt0118688",
+        "tmdb": 415
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 53.817707,
+    "movie": {
+      "title": "Batman Tech",
+      "overview": "He's caped, cowled and the coolest superhero of them all, because underneath that Batsuit, Batman only has his human strength and intellect to rely on. That and the greatest arsenal of crime fighting weaponry ever devised. But just where does comic book science fiction end and scientific fact begin? What technologies are behind the gadgets in Batman's utility belt? And just how plausible is the Batmobile? Get ready for a real life trip to the Batcave as we reveal the secrets behind Batman Tech.",
+      "year": 2008,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/116/883/posters/original/fed7b3f611.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/116/883/posters/medium/fed7b3f611.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/116/883/posters/thumb/fed7b3f611.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/116/883/fanarts/original/daf94bd819.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/116/883/fanarts/medium/daf94bd819.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/116/883/fanarts/thumb/daf94bd819.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 116883,
+        "slug": "batman-tech-2008",
+        "imdb": "tt1265588",
+        "tmdb": 186579
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 53.817707,
+    "movie": {
+      "title": "Batman Legends",
+      "overview": "A four minute short presenting the diverse gallery of Batmans friends and foes in Gotham City.",
+      "year": 2006,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/162/969/posters/original/b7b50f28e6.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/162/969/posters/medium/b7b50f28e6.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/162/969/posters/thumb/b7b50f28e6.jpg"
+        },
+        "fanart": {
+          "full": null,
+          "medium": null,
+          "thumb": null
+        }
+      },
+      "ids": {
+        "trakt": 162969,
+        "slug": "batman-legends-2006",
+        "imdb": "tt0846671",
+        "tmdb": 264203
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 53.817707,
+    "movie": {
+      "title": "James Batman",
+      "overview": "An evil syndicate is set to conquer the world, and the mission is to stop them from fulfilling their viscious plans. The consequences of their failure may mean the destruction of all dissenting countries who stand in their way. All countries must bow to their power before the deadline of five days expires. The solution is sending in their best operatives; James Hika, and the dynamic duo of Batman and Robin. They are first detested with working with each other, but for the safety of the world, they join forces. Through thick and thin, they survive the syndicate's plan to dispose of them. They get closer to stopping the syndicate plan, but there is a traitor in their midst. Will this deter them from achieving their goal?",
+      "year": 1966,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/093/126/posters/original/747b6ef53b.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/093/126/posters/medium/747b6ef53b.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/093/126/posters/thumb/747b6ef53b.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/093/126/fanarts/original/17994c31fc.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/093/126/fanarts/medium/17994c31fc.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/093/126/fanarts/thumb/17994c31fc.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 93126,
+        "slug": "james-batman-1966",
+        "imdb": "tt0361763",
+        "tmdb": 138757
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Batman: Year One",
+      "overview": "Two men come to Gotham City: Bruce Wayne after years abroad feeding his lifelong obsession for justice and Jim Gordon after being too honest a cop with the wrong people elsewhere. After learning painful lessons about the city's corruption on its streets and police department respectively, this pair learn how to fight back their own way. With that, Gotham's evildoers from top to bottom are terrorized by the mysterious Batman and the equally heroic Gordon is assigned to catch him by comrades who both hate and fear him themselves. In the ensuing manhunt, both find much in common as the seeds of an unexpected friendship are laid with additional friends and rivals helping to start the legend.",
+      "year": 2011,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/050/979/posters/original/3a5e684da6.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/050/979/posters/medium/3a5e684da6.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/050/979/posters/thumb/3a5e684da6.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/050/979/fanarts/original/384532be55.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/050/979/fanarts/medium/384532be55.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/050/979/fanarts/thumb/384532be55.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 50979,
+        "slug": "batman-year-one-2011",
+        "imdb": "tt1672723",
+        "tmdb": 69735
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Superman/Batman: Apocalypse",
+      "overview": "Batman discovers a mysterious teen-aged girl with superhuman powers and a connection to Superman. When the girl comes to the attention of Darkseid, the evil overlord of Apokolips, events take a decidedly dangerous turn.",
+      "year": 2010,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/030/768/posters/original/a935d9b9fa.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/030/768/posters/medium/a935d9b9fa.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/030/768/posters/thumb/a935d9b9fa.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/030/768/fanarts/original/5ece9a5e79.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/030/768/fanarts/medium/5ece9a5e79.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/030/768/fanarts/thumb/5ece9a5e79.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 30768,
+        "slug": "superman-batman-apocalypse-2010",
+        "imdb": "tt1673430",
+        "tmdb": 45162
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Son of Batman",
+      "overview": "Batman learns that he has a violent, unruly pre-teen son with Talia al Ghul named Damian Wayne who is secretly being raised by Ra's al Ghul and the League of Assassins. When Ra's al Ghul apparently dies after a battle with Deathstroke, Batman must work to stop his long-lost son from taking revenge and guiding him to a righteous path, in addition to the chance for the pair to truly acknowledging each other as family.",
+      "year": 2014,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/152/526/posters/original/b3198e937e.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/152/526/posters/medium/b3198e937e.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/152/526/posters/thumb/b3198e937e.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/152/526/fanarts/original/e4f7b1e25c.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/152/526/fanarts/medium/e4f7b1e25c.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/152/526/fanarts/thumb/e4f7b1e25c.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 152526,
+        "slug": "son-of-batman-2014",
+        "imdb": "tt3139072",
+        "tmdb": 251519
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Batman vs. Robin",
+      "overview": "Damian Wayne (Stuart Allan) is having a hard time coping with his father's \"no killing\" rule. Meanwhile, Gotham is going through hell with threats such as the insane Dollmaker (\"Weird Al\" Yankovic), and the secretive Court of Owls.",
+      "year": 2015,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/202/204/posters/original/5c22708e55.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/202/204/posters/medium/5c22708e55.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/202/204/posters/thumb/5c22708e55.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/202/204/fanarts/original/3dfe6066bd.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/202/204/fanarts/medium/3dfe6066bd.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/202/204/fanarts/thumb/3dfe6066bd.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 202204,
+        "slug": "batman-vs-robin-2015",
+        "imdb": "tt4324274",
+        "tmdb": 321528
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Batman: Gotham Knight",
+      "overview": "Explore Bruce Wayne's transition from his beginning as a tormented vigilantee to The Dark Knight of a crumbling metropolis with six distinct chapters but intended to be viewed as a whole.",
+      "year": 2008,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/008/235/posters/original/3bd2ae2912.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/008/235/posters/medium/3bd2ae2912.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/008/235/posters/thumb/3bd2ae2912.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/008/235/fanarts/original/921cb5b233.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/008/235/fanarts/medium/921cb5b233.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/008/235/fanarts/thumb/921cb5b233.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 8235,
+        "slug": "batman-gotham-knight-2008",
+        "imdb": "tt1117563",
+        "tmdb": 13851
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Batman: Bad Blood",
+      "overview": "Bruce Wayne is missing. Alfred covers for him while Nightwing and Robin patrol Gotham City in his stead. And a new player, Batwoman, investigates Batman's disappearance.",
+      "year": 2016,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/225/066/posters/original/a42d9b7fd5.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/225/066/posters/medium/a42d9b7fd5.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/225/066/posters/thumb/a42d9b7fd5.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/225/066/fanarts/original/3124c08b60.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/225/066/fanarts/medium/3124c08b60.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/225/066/fanarts/thumb/3124c08b60.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 225066,
+        "slug": "batman-bad-blood-2016",
+        "imdb": "tt4870838",
+        "tmdb": 366924
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Batman and Robin",
+      "overview": "This 15-chapter serial pits Batman and Robin against The Wizard, who uses a device that allows him to control machinery to hold the city hostage.",
+      "year": 1949,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/068/874/posters/original/3889c7a045.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/068/874/posters/medium/3889c7a045.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/068/874/posters/thumb/3889c7a045.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/068/874/fanarts/original/54dfeb6d58.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/068/874/fanarts/medium/54dfeb6d58.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/068/874/fanarts/thumb/54dfeb6d58.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 68874,
+        "slug": "batman-and-robin-1949",
+        "imdb": "tt0041162",
+        "tmdb": 93560
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Batman: Strange Days",
+      "overview": "Celebrating Batman’s 75th anniversary, DC Entertainment and Warner Bros. Animation have debuted this new animated short for the cultural icon.",
+      "year": 2014,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/162/940/posters/original/a8e2f3cb9a.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/162/940/posters/medium/a8e2f3cb9a.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/162/940/posters/thumb/a8e2f3cb9a.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/162/940/fanarts/original/59cf49c423.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/162/940/fanarts/medium/59cf49c423.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/162/940/fanarts/thumb/59cf49c423.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 162940,
+        "slug": "batman-strange-days-2014",
+        "imdb": "tt3643208",
+        "tmdb": 264170
+      }
+    }
+  },
+  {
+    "type": "movie",
+    "score": 43.054165,
+    "movie": {
+      "title": "Batman: Dead End",
+      "overview": "After the Joker escapes from Arkham Asylum, Batman catches up with him in a dark alley. But the Dark Knight isn’t the only hunter prowling the streets.",
+      "year": 2003,
+      "images": {
+        "poster": {
+          "full": "https://walter.trakt.us/images/movies/000/019/843/posters/original/404444935e.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/019/843/posters/medium/404444935e.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/019/843/posters/thumb/404444935e.jpg"
+        },
+        "fanart": {
+          "full": "https://walter.trakt.us/images/movies/000/019/843/fanarts/original/7e073ef19e.jpg",
+          "medium": "https://walter.trakt.us/images/movies/000/019/843/fanarts/medium/7e073ef19e.jpg",
+          "thumb": "https://walter.trakt.us/images/movies/000/019/843/fanarts/thumb/7e073ef19e.jpg"
+        }
+      },
+      "ids": {
+        "trakt": 19843,
+        "slug": "batman-dead-end-2003",
+        "imdb": "tt0374526",
+        "tmdb": 31096
+      }
+    }
+  }
+]

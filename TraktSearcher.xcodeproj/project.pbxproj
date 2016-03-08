@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		CF59B0682816BED02EEF5B58 /* TraktItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B9DC69E000600D3833C2 /* TraktItem.swift */; };
 		CF59B1A147AB0C143EA2F2D9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BA004F582AC914DBFCFE /* Assets.swift */; };
+		CF59B1B00420A23696EFD044 /* TracktSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BD7636FC554F8BF9CDCF /* TracktSearchAPITests.swift */; };
 		CF59B219762512A23522B885 /* JSONHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B1BE98564A1F52C19860 /* JSONHelpers.swift */; };
 		CF59B3BACE182011B6759ABA /* SearchResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B484B0E23FCD82227A5F /* SearchResultItem.swift */; };
 		CF59B40D2E41B1CB8151DD11 /* ItemKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BE61974E437AA3EC754C /* ItemKind.swift */; };
 		CF59B599C50E8527FE51D567 /* MovieImageKindTransformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */; };
 		CF59B605A7B8F5B0E6C0C38D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BDBFDC6E4E4865B2558C /* MainViewController.swift */; };
 		CF59B6EB83544068EDE635CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF59BF1CF729D1B3E5480CA3 /* Assets.xcassets */; };
+		CF59B742AA573395557FDE50 /* Headers.normal.json in Resources */ = {isa = PBXBuildFile; fileRef = CF59B2AD62526A7A40C0BC77 /* Headers.normal.json */; };
 		CF59B9204C7E9289C5DA1ED4 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BA88A84877B5742EBB43 /* MovieTests.swift */; };
 		CF59B94DF2FCB34CF6695705 /* ImageUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BFA6BDC02DEFA2F6E2BC /* ImageUrls.swift */; };
 		CF59B99F586F295C5975840C /* SearchResultItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B8F893D27F4E6B5729B5 /* SearchResultItemTests.swift */; };
 		CF59B9E16E5345D9B942DBF8 /* ImageUrlsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BD2FCFF8C9AD30BB55ED /* ImageUrlsTests.swift */; };
 		CF59B9E3542F8D113A210430 /* TracktSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B66B37E7D5E26A3F2BF6 /* TracktSearchAPI.swift */; };
 		CF59BAF410598B928E42DE70 /* MoviesRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B32F7C11E4DC1047ED72 /* MoviesRequestType.swift */; };
+		CF59BB557CD4BD849EB7076A /* SearchMovies.normal.json in Resources */ = {isa = PBXBuildFile; fileRef = CF59BF83DCBEDECBF5FD27DB /* SearchMovies.normal.json */; };
 		CF59BB56BD3E1A4781E5D71C /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59BEBDC782616D8773AC6A /* MoviesResponse.swift */; };
+		CF59BC0252A561AB74EC46FD /* PopularMovies.normal.json in Resources */ = {isa = PBXBuildFile; fileRef = CF59BDE662CB21E2711D4B11 /* PopularMovies.normal.json */; };
 		CF59BC0B3D748D1215055F59 /* MovieImageKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B4E09B1B9D2A80CA418D /* MovieImageKind.swift */; };
 		CF59BD456B58B8E0732079B7 /* Validable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B90F9F4C79F64600DB17 /* Validable.swift */; };
 		CF59BEC24C1067BF92F9BD2C /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59B53487855E5D9380EA50 /* PaginationInfo.swift */; };
@@ -38,6 +42,7 @@
 		D8C2948A1C8C56EA001B2AD4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; };
 		D8C2948B1C8C56EA001B2AD4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8C294961C8C7DF8001B2AD4 /* TracktSearchAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294691C8C517F001B2AD4 /* TracktSearchAPI.framework */; };
+		D8C2949E1C8C806F001B2AD4 /* TracktSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C2949D1C8C806F001B2AD4 /* TracktSearchAPITests.swift */; };
 		D8C294A11C8C82F1001B2AD4 /* Alamofire.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294871C8C55F2001B2AD4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8C294A31C8C8D7A001B2AD4 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; };
 		D8C294A41C8C8D91001B2AD4 /* ObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -150,6 +155,7 @@
 /* Begin PBXFileReference section */
 		CF59B09C3E9D91B6CA046CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TraktSearcher/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		CF59B1BE98564A1F52C19860 /* JSONHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelpers.swift; sourceTree = "<group>"; };
+		CF59B2AD62526A7A40C0BC77 /* Headers.normal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Headers.normal.json; sourceTree = "<group>"; };
 		CF59B32F7C11E4DC1047ED72 /* MoviesRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRequestType.swift; sourceTree = "<group>"; };
 		CF59B484B0E23FCD82227A5F /* SearchResultItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultItem.swift; sourceTree = "<group>"; };
 		CF59B4E09B1B9D2A80CA418D /* MovieImageKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieImageKind.swift; sourceTree = "<group>"; };
@@ -164,13 +170,16 @@
 		CF59BA88A84877B5742EBB43 /* MovieTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		CF59BD1629362C7623959A70 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		CF59BD2FCFF8C9AD30BB55ED /* ImageUrlsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrlsTests.swift; sourceTree = "<group>"; };
+		CF59BD7636FC554F8BF9CDCF /* TracktSearchAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracktSearchAPITests.swift; sourceTree = "<group>"; };
 		CF59BDA24082057C5C7C8C2A /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CF59BDBFDC6E4E4865B2558C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CF59BDE662CB21E2711D4B11 /* PopularMovies.normal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PopularMovies.normal.json; sourceTree = "<group>"; };
 		CF59BE61974E437AA3EC754C /* ItemKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemKind.swift; sourceTree = "<group>"; };
 		CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieImageKindTransformTests.swift; sourceTree = "<group>"; };
 		CF59BE86DF97B1A666267FC7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CF59BEBDC782616D8773AC6A /* MoviesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 		CF59BF1CF729D1B3E5480CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF59BF83DCBEDECBF5FD27DB /* SearchMovies.normal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SearchMovies.normal.json; sourceTree = "<group>"; };
 		CF59BFA6BDC02DEFA2F6E2BC /* ImageUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrls.swift; sourceTree = "<group>"; };
 		D8589B2D1C8E47D7001EF0D7 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearcherTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -183,6 +192,8 @@
 		D8C294871C8C55F2001B2AD4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D8C294911C8C7DF8001B2AD4 /* TracktSearchAPIIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TracktSearchAPIIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C294951C8C7DF8001B2AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C2949C1C8C806F001B2AD4 /* TracktSearchAPIIntegrationTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TracktSearchAPIIntegrationTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8C2949D1C8C806F001B2AD4 /* TracktSearchAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracktSearchAPITests.swift; sourceTree = "<group>"; };
 		D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		D8C294A81C8D7E59001B2AD4 /* TracktSearchAPITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TracktSearchAPITests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -250,6 +261,16 @@
 			path = "Views & Controllers";
 			sourceTree = "<group>";
 		};
+		CF59B422DEFD732B53534BFC /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				CF59BDE662CB21E2711D4B11 /* PopularMovies.normal.json */,
+				CF59B2AD62526A7A40C0BC77 /* Headers.normal.json */,
+				CF59BF83DCBEDECBF5FD27DB /* SearchMovies.normal.json */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		CF59BA798976827069D95464 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +320,7 @@
 				CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */,
 				CF59B8F893D27F4E6B5729B5 /* SearchResultItemTests.swift */,
 				CF59B1BE98564A1F52C19860 /* JSONHelpers.swift */,
+				CF59BD7636FC554F8BF9CDCF /* TracktSearchAPITests.swift */,
 			);
 			path = TracktSearchAPITests;
 			sourceTree = "<group>";
@@ -318,6 +340,9 @@
 			isa = PBXGroup;
 			children = (
 				D8C294951C8C7DF8001B2AD4 /* Info.plist */,
+				D8C2949D1C8C806F001B2AD4 /* TracktSearchAPITests.swift */,
+				D8C2949C1C8C806F001B2AD4 /* TracktSearchAPIIntegrationTests-Bridging-Header.h */,
+				CF59B422DEFD732B53534BFC /* Responses */,
 			);
 			path = TracktSearchAPIIntegrationTests;
 			sourceTree = "<group>";
@@ -550,6 +575,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF59BC0252A561AB74EC46FD /* PopularMovies.normal.json in Resources */,
+				CF59B742AA573395557FDE50 /* Headers.normal.json in Resources */,
+				CF59BB557CD4BD849EB7076A /* SearchMovies.normal.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +628,7 @@
 				CF59B599C50E8527FE51D567 /* MovieImageKindTransformTests.swift in Sources */,
 				CF59B99F586F295C5975840C /* SearchResultItemTests.swift in Sources */,
 				CF59B219762512A23522B885 /* JSONHelpers.swift in Sources */,
+				CF59B1B00420A23696EFD044 /* TracktSearchAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C2949E1C8C806F001B2AD4 /* TracktSearchAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,20 +786,33 @@
 		D8C294991C8C7DF8001B2AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TracktSearchAPIIntegrationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TracktSearchAPIIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TracktSearchAPIIntegrationTests/TracktSearchAPIIntegrationTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D8C2949A1C8C7DF8001B2AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TracktSearchAPIIntegrationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TracktSearchAPIIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TracktSearchAPIIntegrationTests/TracktSearchAPIIntegrationTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
