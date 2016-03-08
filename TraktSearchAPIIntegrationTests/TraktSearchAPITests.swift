@@ -1,6 +1,6 @@
 //
-//  TracktSearchAPITests.swift
-//  TracktSearchAPIIntegrationTests
+//  TraktSearchAPITests.swift
+//  TraktSearchAPIIntegrationTests
 //
 //  Copyright © 2016 Vitaly Chupryk. All rights reserved.
 //
@@ -9,9 +9,9 @@ import XCTest
 import ObjectMapper
 import OHHTTPStubs
 
-@testable import TracktSearchAPI
+@testable import TraktSearchAPI
 
-class TracktSearchAPITests: XCTestCase
+class TraktSearchAPITests: XCTestCase
 {
     private static let popularMoviesUrlPath = "/movies/popular"
     private static let searchMoviesUrlPath = "/search"
@@ -26,13 +26,13 @@ class TracktSearchAPITests: XCTestCase
     let applicationKey = NSUUID().UUIDString
     let queue: NSOperationQueue = NSOperationQueue()
 
-    var searchAPI: TracktSearchAPI?
+    var searchAPI: TraktSearchAPI?
 
     override func setUp()
     {
         super.setUp()
 
-        self.searchAPI = TracktSearchAPI(queue: self.queue, applicationKey: self.applicationKey)
+        self.searchAPI = TraktSearchAPI(queue: self.queue, applicationKey: self.applicationKey)
     }
 
     override func tearDown()

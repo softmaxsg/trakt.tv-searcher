@@ -1,12 +1,12 @@
 //
 //  JSONHelpers.swift
-//  TracktSearchAPITests
+//  TraktSearchAPITests
 //
 //  Copyright © 2016 Vitaly Chupryk. All rights reserved.
 //
 
 import Foundation
-import TracktSearchAPI
+import TraktSearchAPI
 
 struct JSONHelpers
 {

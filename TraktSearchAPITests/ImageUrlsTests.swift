@@ -1,6 +1,6 @@
 //
 //  ImageUrlsTests.swift
-//  TracktSearchAPITests
+//  TraktSearchAPITests
 //
 //  Copyright © 2016 Vitaly Chupryk. All rights reserved.
 //
@@ -8,7 +8,7 @@
 import XCTest
 import ObjectMapper
 
-@testable import TracktSearchAPI
+@testable import TraktSearchAPI
 
 class ImageUrlsTests: XCTestCase
 {

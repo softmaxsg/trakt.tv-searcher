@@ -1,5 +1,5 @@
 //
-//  TracktSearchAPI.swift
+//  TraktSearchAPI.swift
 //  TraktSearchAPI
 //
 //  Copyright © 2016 Vitaly Chupryk. All rights reserved.
@@ -10,7 +10,7 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-public class TracktSearchAPI
+public class TraktSearchAPI
 {
     // MARK: Private constants
     private static let headerContentTypeKey = "Content-Type"
