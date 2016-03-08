@@ -109,4 +109,10 @@ class MovieTests: XCTestCase
             XCTAssertFalse(movie!.isValid())
         }
     }
+
+    func testEqual()
+    {
+        XCTAssertEqual(Mapper<Movie>().map(JSONHelpers.Movie.defaultValue), Mapper<Movie>().map(JSONHelpers.Movie.defaultValue))
+        XCTAssertNotEqual(Mapper<Movie>().map(JSONHelpers.Movie.defaultValue), Mapper<Movie>().map([:]))
+    }
 }

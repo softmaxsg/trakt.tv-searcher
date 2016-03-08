@@ -77,4 +77,10 @@ class ImageUrlsTests: XCTestCase
 
     // As far as this is exactly same as testMappingEmpty or testMappingInvalidValues there is no need in this test case
     // func testIsValidFalse()
+
+    func testEqual()
+    {
+        XCTAssertEqual(Mapper<ImageUrls>().map(JSONHelpers.ImageUrls.defaultValue), Mapper<ImageUrls>().map(JSONHelpers.ImageUrls.defaultValue))
+        XCTAssertNotEqual(Mapper<ImageUrls>().map(JSONHelpers.ImageUrls.defaultValue), Mapper<ImageUrls>().map([:]))
+    }
 }

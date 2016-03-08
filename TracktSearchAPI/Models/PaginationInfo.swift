@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-public struct PaginationInfo: Mappable, Validable
+public struct PaginationInfo: Mappable, Validable, Equatable
 {
     // Keys are in lowercase because they are lowercased somewhere before they reach us
     private static let headerPageNumberKey = "x-pagination-page"
@@ -41,4 +41,13 @@ public struct PaginationInfo: Mappable, Validable
     {
         return (self.pageNumber ?? 0) > 0 && (self.pageSize ?? 0) > 0
     }
+}
+
+// MARK: Equatable
+public func ==(lhs: PaginationInfo, rhs: PaginationInfo) -> Bool
+{
+    return lhs.pageNumber == rhs.pageNumber &&
+        lhs.pageSize == rhs.pageSize &&
+        lhs.itemsCount == rhs.itemsCount &&
+        lhs.pagesCount == rhs.pagesCount
 }

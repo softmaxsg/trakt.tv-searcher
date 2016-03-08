@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-public struct Movie: TraktItem
+public struct Movie: TraktItem, Equatable
 {
     private static let jsonTitleKey = "title"
     private static let jsonOverviewKey = "overview"
@@ -38,4 +38,13 @@ public struct Movie: TraktItem
     {
         return self.title != nil && (self.year ?? 0) > 0
     }
+}
+
+// MARK: Equatable
+public func ==(lhs: Movie, rhs: Movie) -> Bool
+{
+    return lhs.title == rhs.title &&
+        lhs.overview == rhs.overview &&
+        lhs.year == rhs.year &&
+        (lhs.images == nil && rhs.images == nil || lhs.images != nil && rhs.images != nil && lhs.images! == rhs.images!)
 }

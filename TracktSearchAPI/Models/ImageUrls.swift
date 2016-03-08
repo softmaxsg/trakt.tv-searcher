@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-public struct ImageUrls: Mappable, Validable
+public struct ImageUrls: Mappable, Validable, Equatable
 {
     private static let jsonFullKey = "full"
     private static let jsonMediumKey = "medium"
@@ -35,4 +35,12 @@ public struct ImageUrls: Mappable, Validable
     {
         return self.full != nil || self.medium != nil || self.thumbnail != nil
     }
+}
+
+// MARK: Equatable
+public func ==(lhs: ImageUrls, rhs: ImageUrls) -> Bool
+{
+    return lhs.full == rhs.full &&
+        lhs.medium == rhs.medium &&
+        lhs.thumbnail == rhs.thumbnail
 }

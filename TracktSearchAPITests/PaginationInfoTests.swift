@@ -95,4 +95,10 @@ class PaginationInfoTests: XCTestCase
             XCTAssertFalse(paginationInfo!.isValid())
         }
     }
+
+    func testEqual()
+    {
+        XCTAssertEqual(Mapper<PaginationInfo>().map(JSONHelpers.PaginationInfo.defaultValue), Mapper<PaginationInfo>().map(JSONHelpers.PaginationInfo.defaultValue))
+        XCTAssertNotEqual(Mapper<PaginationInfo>().map(JSONHelpers.PaginationInfo.defaultValue), Mapper<PaginationInfo>().map([:]))
+    }
 }
