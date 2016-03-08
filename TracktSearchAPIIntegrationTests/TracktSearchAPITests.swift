@@ -18,7 +18,10 @@ class TracktSearchAPITests: XCTestCase
 
     private static let fileResponseNormalPopularMovies = "PopularMovies.normal.json"
     private static let fileResponseNormalSearchMovies = "SearchMovies.normal.json"
+    private static let fileResponseInvalidPopularMovies = "PopularMovies.invalid.json"
+    private static let fileResponseInvalidSearchMovies = "SearchMovies.invalid.json"
     private static let fileHeadersNormal = "Headers.normal.json"
+    private static let fileHeadersInvalid = "Headers.invalid.json"
 
     let applicationKey = NSUUID().UUIDString
     let queue: NSOperationQueue = NSOperationQueue()
@@ -35,6 +38,7 @@ class TracktSearchAPITests: XCTestCase
     override func tearDown()
     {
         self.searchAPI = nil
+        OHHTTPStubs.removeAllStubs()
 
         super.tearDown()
     }
@@ -62,33 +66,99 @@ class TracktSearchAPITests: XCTestCase
         return self.JSONObjectWithFileName(self.dynamicType.fileHeadersNormal) as? [String: String] ?? [:]
     }
 
-    func stubRequestsWithNormalResponse()
+    func invalidResponseHeaders() -> [String: String]
+    {
+        return self.JSONObjectWithFileName(self.dynamicType.fileHeadersInvalid) as? [String: String] ?? [:]
+    }
+
+    func stubRequestsWithResponses(responses: [String: (fileName: String, statusCode: Int32, headers: [String: String]?)])
     {
         stub({ request in
-            switch request.URL?.path ?? "" {
-            case self.dynamicType.popularMoviesUrlPath,
-                 self.dynamicType.searchMoviesUrlPath: return true
-            default: return false
-            }
+            return responses[request.URL?.path ?? ""] != nil
         }, response: { request in
-            let fileName: String
-
-            switch request.URL?.path ?? "" {
-            case self.dynamicType.popularMoviesUrlPath: fileName = self.dynamicType.fileResponseNormalPopularMovies
-            case self.dynamicType.searchMoviesUrlPath: fileName = self.dynamicType.fileResponseNormalSearchMovies
-            default: return OHHTTPStubsResponse()
-            }
-
-            guard let fileUrl = self.URLForFileName(fileName) else {
+            guard let response = responses[request.URL?.path ?? ""] else {
                 return OHHTTPStubsResponse()
             }
 
-            return OHHTTPStubsResponse(fileURL: fileUrl, statusCode: 200, headers: self.normalResponseHeaders())
+            guard let fileUrl = self.URLForFileName(response.fileName) else {
+                return OHHTTPStubsResponse()
+            }
+
+            return OHHTTPStubsResponse(fileURL: fileUrl, statusCode: response.statusCode, headers: response.headers)
         })
     }
 
-    func validateMoviesResponse(response: MoviesResponse, movies originalMovies: [Movie], paginationInfo originalPaginationInfo: PaginationInfo)
+    func stubRequestsWithNormalResponse()
     {
+        self.stubRequestsWithResponses([
+            self.dynamicType.popularMoviesUrlPath: (
+                fileName: self.dynamicType.fileResponseNormalPopularMovies,
+                statusCode: 200,
+                headers: self.normalResponseHeaders()
+            ),
+            self.dynamicType.searchMoviesUrlPath: (
+                fileName: self.dynamicType.fileResponseNormalSearchMovies,
+                statusCode: 200,
+                headers: self.normalResponseHeaders()
+            ),
+        ])
+    }
+
+    func stubRequestsWithEmptyResponse()
+    {
+        self.stubRequestsWithResponses([
+            self.dynamicType.popularMoviesUrlPath: (
+                fileName: "",
+                statusCode: 200,
+                headers: nil
+            ),
+            self.dynamicType.searchMoviesUrlPath: (
+                fileName: "",
+                statusCode: 200,
+                headers: nil
+            ),
+        ])
+    }
+
+    func stubRequestsWithInvalidResponse()
+    {
+        self.stubRequestsWithResponses([
+            self.dynamicType.popularMoviesUrlPath: (
+                fileName: self.dynamicType.fileResponseInvalidPopularMovies,
+                statusCode: 200,
+                headers: self.normalResponseHeaders()
+            ),
+            self.dynamicType.searchMoviesUrlPath: (
+                fileName: self.dynamicType.fileResponseInvalidSearchMovies,
+                statusCode: 200,
+                headers: self.normalResponseHeaders()
+            ),
+        ])
+    }
+
+    func stubRequestsWithInvalidHeadersResponse()
+    {
+        self.stubRequestsWithResponses([
+            self.dynamicType.popularMoviesUrlPath: (
+                fileName: self.dynamicType.fileResponseNormalPopularMovies,
+                statusCode: 200,
+                headers: self.invalidResponseHeaders()
+            ),
+            self.dynamicType.searchMoviesUrlPath: (
+                fileName: self.dynamicType.fileResponseNormalSearchMovies,
+                statusCode: 200,
+                headers: self.invalidResponseHeaders()
+            ),
+        ])
+    }
+
+    func validateMoviesResponse(moviesResponse: MoviesResponse?, movies originalMovies: [Movie], paginationInfo originalPaginationInfo: PaginationInfo)
+    {
+        guard let response = moviesResponse else {
+            XCTAssertTrue(false)
+            return
+        }
+
         switch response {
         case .Success(let movies, let paginationInfo):
             XCTAssertEqual(movies, originalMovies)
@@ -98,12 +168,25 @@ class TracktSearchAPITests: XCTestCase
         }
     }
 
+    func validateErrorResponse(moviesResponse: MoviesResponse?)
+    {
+        guard let response = moviesResponse else {
+            XCTAssertTrue(false)
+            return
+        }
+
+        switch response {
+        case .Error: XCTAssertTrue(true)
+        default: XCTAssertTrue(false)
+        }
+    }
+
     func testLoadPopularMoviesNormal()
     {
         self.stubRequestsWithNormalResponse()
 
         var moviesResponse: MoviesResponse?
-        let expectation = self.expectationWithDescription("Performing loadMovies request to Search API")
+        let expectation = self.expectationWithDescription("Performing loadPopularMovies request to Search API")
 
         self.searchAPI!.loadPopularMovies(pageNumber:1, pageSize: 20) { response in
             moviesResponse = response
@@ -111,11 +194,6 @@ class TracktSearchAPITests: XCTestCase
         }
 
         self.waitForExpectationsWithTimeout(5, handler: nil)
-
-        guard let response = moviesResponse else {
-            XCTAssertTrue(false)
-            return
-        }
 
         guard let movies = Mapper<Movie>().mapArray(self.JSONObjectWithFileName(self.dynamicType.fileResponseNormalPopularMovies)) else {
             XCTAssertTrue(false)
@@ -127,7 +205,7 @@ class TracktSearchAPITests: XCTestCase
             return
         }
 
-        self.validateMoviesResponse(response, movies: movies, paginationInfo: paginationInfo)
+        self.validateMoviesResponse(moviesResponse, movies: movies, paginationInfo: paginationInfo)
     }
 
     func testSearchMoviesNormal()
@@ -144,11 +222,6 @@ class TracktSearchAPITests: XCTestCase
 
         self.waitForExpectationsWithTimeout(5, handler: nil)
 
-        guard let response = moviesResponse else {
-            XCTAssertTrue(false)
-            return
-        }
-
         guard let searchItems = Mapper<SearchResultItem>().mapArray(self.JSONObjectWithFileName(self.dynamicType.fileResponseNormalSearchMovies)) else {
             XCTAssertTrue(false)
             return
@@ -161,6 +234,108 @@ class TracktSearchAPITests: XCTestCase
 
         let movies = searchItems.map { $0.item as? Movie ?? Movie(JSON: [:])! }.filter { $0.isValid() }
 
-        self.validateMoviesResponse(response, movies: movies, paginationInfo: paginationInfo)
+        self.validateMoviesResponse(moviesResponse, movies: movies, paginationInfo: paginationInfo)
+    }
+
+    func testLoadPopularMoviesEmpty()
+    {
+        self.stubRequestsWithEmptyResponse()
+
+        var moviesResponse: MoviesResponse?
+        let expectation = self.expectationWithDescription("Performing loadPopularMovies request to Search API")
+
+        self.searchAPI!.loadPopularMovies(pageNumber:1, pageSize: 20) { response in
+            moviesResponse = response
+            expectation.fulfill()
+        }
+
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+
+        self.validateErrorResponse(moviesResponse)
+    }
+
+    func testSearchMoviesEmpty()
+    {
+        self.stubRequestsWithEmptyResponse()
+
+        var moviesResponse: MoviesResponse?
+        let expectation = self.expectationWithDescription("Performing searchMovies request to Search API")
+
+        self.searchAPI!.searchMovies("batman", pageNumber:1, pageSize: 20) { response in
+            moviesResponse = response
+            expectation.fulfill()
+        }
+
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+
+        self.validateErrorResponse(moviesResponse)
+    }
+
+    func testLoadPopularMoviesInvalid()
+    {
+        self.stubRequestsWithInvalidResponse()
+
+        var moviesResponse: MoviesResponse?
+        let expectation = self.expectationWithDescription("Performing loadPopularMovies request to Search API")
+
+        self.searchAPI!.loadPopularMovies(pageNumber:1, pageSize: 20) { response in
+            moviesResponse = response
+            expectation.fulfill()
+        }
+
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+
+        self.validateErrorResponse(moviesResponse)
+    }
+
+    func testSearchMoviesInvalid()
+    {
+        self.stubRequestsWithInvalidResponse()
+
+        var moviesResponse: MoviesResponse?
+        let expectation = self.expectationWithDescription("Performing searchMovies request to Search API")
+
+        self.searchAPI!.searchMovies("batman", pageNumber:1, pageSize: 20) { response in
+            moviesResponse = response
+            expectation.fulfill()
+        }
+
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+
+        self.validateErrorResponse(moviesResponse)
+    }
+
+    func testLoadPopularMoviesInvalidHeaders()
+    {
+        self.stubRequestsWithInvalidHeadersResponse()
+
+        var moviesResponse: MoviesResponse?
+        let expectation = self.expectationWithDescription("Performing loadPopularMovies request to Search API")
+
+        self.searchAPI!.loadPopularMovies(pageNumber:1, pageSize: 20) { response in
+            moviesResponse = response
+            expectation.fulfill()
+        }
+
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+
+        self.validateErrorResponse(moviesResponse)
+    }
+
+    func testSearchMoviesInvalidHeaders()
+    {
+        self.stubRequestsWithInvalidHeadersResponse()
+
+        var moviesResponse: MoviesResponse?
+        let expectation = self.expectationWithDescription("Performing searchMovies request to Search API")
+
+        self.searchAPI!.searchMovies("batman", pageNumber:1, pageSize: 20) { response in
+            moviesResponse = response
+            expectation.fulfill()
+        }
+
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+
+        self.validateErrorResponse(moviesResponse)
     }
 }
