@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import ObjectMapper
 import OHHTTPStubs
 
 @testable import TracktSearchAPI
@@ -38,21 +39,27 @@ class TracktSearchAPITests: XCTestCase
         super.tearDown()
     }
 
-    func normalResponseHeaders() -> [String: String]
+    func URLForFileName(fileName: String) -> NSURL?
     {
-        guard let fileUrl = NSBundle(forClass: self.dynamicType).URLForResource(self.dynamicType.fileHeadersNormal, withExtension: nil) else {
-            return [:]
+        return NSBundle(forClass: self.dynamicType).URLForResource(fileName, withExtension: nil)
+    }
+
+    func JSONObjectWithFileName(fileName: String) -> AnyObject?
+    {
+        guard let fileUrl = self.URLForFileName(fileName) else {
+            return nil
         }
 
         guard let jsonData = NSData(contentsOfURL: fileUrl) else {
-            return [:]
+            return nil
         }
 
-        guard let headers = (try? Foundation.NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions())) as? [String: String] else {
-            return [:]
-        }
+        return try? NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions())
+    }
 
-        return headers
+    func normalResponseHeaders() -> [String: String]
+    {
+        return self.JSONObjectWithFileName(self.dynamicType.fileHeadersNormal) as? [String: String] ?? [:]
     }
 
     func stubRequestsWithNormalResponse()
@@ -72,12 +79,23 @@ class TracktSearchAPITests: XCTestCase
             default: return OHHTTPStubsResponse()
             }
 
-            guard let fileUrl = NSBundle(forClass: self.dynamicType).URLForResource(fileName, withExtension: nil) else {
+            guard let fileUrl = self.URLForFileName(fileName) else {
                 return OHHTTPStubsResponse()
             }
 
             return OHHTTPStubsResponse(fileURL: fileUrl, statusCode: 200, headers: self.normalResponseHeaders())
         })
+    }
+
+    func validateMoviesResponse(response: MoviesResponse, movies originalMovies: [Movie], paginationInfo originalPaginationInfo: PaginationInfo)
+    {
+        switch response {
+        case .Success(let movies, let paginationInfo):
+            XCTAssertEqual(movies, originalMovies)
+            XCTAssertEqual(paginationInfo, originalPaginationInfo)
+
+        default: XCTAssertTrue(false)
+        }
     }
 
     func testLoadPopularMoviesNormal()
@@ -99,7 +117,17 @@ class TracktSearchAPITests: XCTestCase
             return
         }
 
-        //
+        guard let movies = Mapper<Movie>().mapArray(self.JSONObjectWithFileName(self.dynamicType.fileResponseNormalPopularMovies)) else {
+            XCTAssertTrue(false)
+            return
+        }
+
+        guard let paginationInfo = Mapper<PaginationInfo>().map(self.normalResponseHeaders()) else {
+            XCTAssertTrue(false)
+            return
+        }
+
+        self.validateMoviesResponse(response, movies: movies, paginationInfo: paginationInfo)
     }
 
     func testSearchMoviesNormal()
@@ -121,6 +149,18 @@ class TracktSearchAPITests: XCTestCase
             return
         }
 
-        //
+        guard let searchItems = Mapper<SearchResultItem>().mapArray(self.JSONObjectWithFileName(self.dynamicType.fileResponseNormalSearchMovies)) else {
+            XCTAssertTrue(false)
+            return
+        }
+
+        guard let paginationInfo = Mapper<PaginationInfo>().map(self.normalResponseHeaders()) else {
+            XCTAssertTrue(false)
+            return
+        }
+
+        let movies = searchItems.map { $0.item as? Movie ?? Movie(JSON: [:])! }.filter { $0.isValid() }
+
+        self.validateMoviesResponse(response, movies: movies, paginationInfo: paginationInfo)
     }
 }
