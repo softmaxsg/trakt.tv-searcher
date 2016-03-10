@@ -232,7 +232,6 @@
 		D8589B2D1C8E47D7001EF0D7 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		D8589B301C918B88001EF0D7 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		D8589B331C91ACC4001EF0D7 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
-		D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearcherTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
 		D8C294691C8C517F001B2AD4 /* TraktSearchAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TraktSearchAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C2946B1C8C517F001B2AD4 /* TraktSearchAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TraktSearchAPI.h; sourceTree = "<group>"; };
@@ -242,11 +241,9 @@
 		D8C294871C8C55F2001B2AD4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		D8C294911C8C7DF8001B2AD4 /* TraktSearchAPIIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraktSearchAPIIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C294951C8C7DF8001B2AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		D8C2949C1C8C806F001B2AD4 /* TraktSearchAPIIntegrationTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearchAPIIntegrationTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8C2949D1C8C806F001B2AD4 /* TraktSearchAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktSearchAPITests.swift; sourceTree = "<group>"; };
 		D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
-		D8C294A81C8D7E59001B2AD4 /* TraktSearchAPITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearchAPITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8C294A91C8D7E59001B2AD4 /* PaginationInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationInfoTests.swift; sourceTree = "<group>"; };
 		D8D1619A1C8C333B0079F89D /* TraktSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1619D1C8C333B0079F89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -416,7 +413,6 @@
 			children = (
 				D8C2947B1C8C517F001B2AD4 /* Info.plist */,
 				D8C294A91C8D7E59001B2AD4 /* PaginationInfoTests.swift */,
-				D8C294A81C8D7E59001B2AD4 /* TraktSearchAPITests-Bridging-Header.h */,
 				CF59BD2FCFF8C9AD30BB55ED /* ImageUrlsTests.swift */,
 				CF59BA88A84877B5742EBB43 /* MovieTests.swift */,
 				CF59BE77E3346F356DE19580 /* MovieImageKindTransformTests.swift */,
@@ -445,7 +441,6 @@
 			children = (
 				D8C294951C8C7DF8001B2AD4 /* Info.plist */,
 				D8C2949D1C8C806F001B2AD4 /* TraktSearchAPITests.swift */,
-				D8C2949C1C8C806F001B2AD4 /* TraktSearchAPIIntegrationTests-Bridging-Header.h */,
 				CF59B422DEFD732B53534BFC /* Responses */,
 			);
 			path = TraktSearchAPIIntegrationTests;
@@ -498,7 +493,6 @@
 			children = (
 				D8D161B41C8C333B0079F89D /* Info.plist */,
 				D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */,
-				D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */,
 			);
 			path = TraktSearcherTests;
 			sourceTree = "<group>";
@@ -843,6 +837,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearchAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -868,6 +863,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearchAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -886,7 +882,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearchAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraktSearchAPITests/TraktSearchAPITests-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -903,7 +899,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearchAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraktSearchAPITests/TraktSearchAPITests-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 			};
 			name = Release;
 		};
@@ -919,7 +915,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearchAPIIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraktSearchAPIIntegrationTests/TraktSearchAPIIntegrationTests-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -936,7 +932,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearchAPIIntegrationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraktSearchAPIIntegrationTests/TraktSearchAPIIntegrationTests-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 			};
 			name = Release;
 		};
@@ -1034,6 +1030,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1051,6 +1048,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1064,7 +1062,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearcherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraktSearcherTests/TraktSearcherTests-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraktSearcher.app/TraktSearcher";
 			};
@@ -1079,7 +1078,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearcherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraktSearcherTests/TraktSearcherTests-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraktSearcher.app/TraktSearcher";
 			};
 			name = Release;
