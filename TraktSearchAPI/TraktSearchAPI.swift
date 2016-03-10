@@ -56,7 +56,7 @@ public class TraktSearchAPI: TraktSearchAPIProtocol
     }
 
     // MARK: Internal API Requests
-    internal func performMoviesListRequest<T: Mappable>(url: NSURL, pageNumber: UInt, pageSize: UInt, additionalParameters: [String : AnyObject]?, filterMoviesHandler: ([T]?) -> [Movie]?, completionHandler: (MoviesResponse) -> ())
+    internal func performMoviesListRequest<T: Mappable>(url: NSURL, pageNumber: UInt, pageSize: UInt, additionalParameters: [String : AnyObject]?, filterMoviesHandler: ([T]?) -> [Movie]?, completionHandler: (MoviesResponse) -> ()) -> TraktSearchAPICancelable
     {
         assert(pageNumber > 0, "Parameter pageNumber has to be greater than 0")
 
@@ -81,7 +81,7 @@ public class TraktSearchAPI: TraktSearchAPIProtocol
 
         let defaultError = self.dynamicType.badServerResponseError
 
-        Alamofire.request(.GET, url, headers: headers, parameters: parameters, encoding: .URLEncodedInURL)
+        let request = Alamofire.request(.GET, url, headers: headers, parameters: parameters, encoding: .URLEncodedInURL)
         .validate()
         .responseArray { [weak self] (response: Response<[T], NSError>) in
             guard response.result.isSuccess else {
@@ -105,11 +105,13 @@ public class TraktSearchAPI: TraktSearchAPIProtocol
 
             self?.callCompletionHandler(completionHandler, object: .Success(validMovies, paginationInfo))
         }
+
+        return request
     }
 
-    internal func loadMovies(requestType: MoviesRequestType, pageNumber: UInt, pageSize: UInt, completionHandler: (MoviesResponse) -> ())
+    internal func loadMovies(requestType: MoviesRequestType, pageNumber: UInt, pageSize: UInt, completionHandler: (MoviesResponse) -> ()) -> TraktSearchAPICancelable
     {
-        self.performMoviesListRequest(
+        return self.performMoviesListRequest(
             self.dynamicType.baseServerUrl.URLByAppendingPathComponent("\(self.dynamicType.urlPathNameMovies)/\(requestType.rawValue)"),
             pageNumber: pageNumber,
             pageSize: pageSize,
@@ -122,14 +124,14 @@ public class TraktSearchAPI: TraktSearchAPIProtocol
     }
 
     // MARK: Public API Requests
-    public func loadPopularMovies(pageNumber pageNumber: UInt, pageSize: UInt, completionHandler: (MoviesResponse) -> ())
+    public func loadPopularMovies(pageNumber pageNumber: UInt, pageSize: UInt, completionHandler: (MoviesResponse) -> ()) -> TraktSearchAPICancelable
     {
-        self.loadMovies(.Popular, pageNumber: pageNumber, pageSize: pageSize, completionHandler: completionHandler)
+        return self.loadMovies(.Popular, pageNumber: pageNumber, pageSize: pageSize, completionHandler: completionHandler)
     }
 
-    public func searchMovies(query: String, pageNumber: UInt, pageSize: UInt, completionHandler: (MoviesResponse) -> ())
+    public func searchMovies(query: String, pageNumber: UInt, pageSize: UInt, completionHandler: (MoviesResponse) -> ()) -> TraktSearchAPICancelable
     {
-        self.performMoviesListRequest(
+        return self.performMoviesListRequest(
             self.dynamicType.baseServerUrl.URLByAppendingPathComponent(self.dynamicType.urlPathNameSearch),
             pageNumber: pageNumber,
             pageSize: pageSize,
