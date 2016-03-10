@@ -10,7 +10,7 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-public class TraktSearchAPI
+public class TraktSearchAPI: TraktSearchAPIProtocol
 {
     // MARK: Private constants
     private static let headerContentTypeKey = "Content-Type"
@@ -41,7 +41,7 @@ public class TraktSearchAPI
     public private(set) var resultQueue: NSOperationQueue
     public private(set) var applicationKey: String
 
-    init(queue: NSOperationQueue, applicationKey: String)
+    public init(queue: NSOperationQueue, applicationKey: String)
     {
         self.resultQueue = queue
         self.applicationKey = applicationKey
