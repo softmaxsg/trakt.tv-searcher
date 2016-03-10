@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
+        application.statusBarHidden = false
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window.rootViewController = MainViewController()
         self.window = window
