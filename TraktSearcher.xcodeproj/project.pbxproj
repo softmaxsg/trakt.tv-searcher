@@ -92,6 +92,10 @@
 		D8CA85301C91E7A70099468B /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8CA85311C91E7A70099468B /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; };
 		D8CA85321C91E7A70099468B /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8CA85361C921BF30099468B /* ObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8CA85381C921C440099468B /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; };
+		D8CA853F1C921FA70099468B /* TraktSearchAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294691C8C517F001B2AD4 /* TraktSearchAPI.framework */; };
+		D8CA85421C9220010099468B /* TraktSearchAPI.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294691C8C517F001B2AD4 /* TraktSearchAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8D1619E1C8C333B0079F89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1619D1C8C333B0079F89D /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -323,6 +327,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CA853F1C921FA70099468B /* TraktSearchAPI.framework in Frameworks */,
+				D8CA85381C921C440099468B /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +637,7 @@
 				D8D161AA1C8C333B0079F89D /* Sources */,
 				D8D161AB1C8C333B0079F89D /* Frameworks */,
 				D8D161AC1C8C333B0079F89D /* Resources */,
+				D8CA85351C921BC80099468B /* Copy Frameworks Files */,
 			);
 			buildRules = (
 			);
@@ -1104,6 +1111,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TraktSearcherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearcherTests;
@@ -1120,6 +1131,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TraktSearcherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.softmaxsg.TraktSearcherTests;
