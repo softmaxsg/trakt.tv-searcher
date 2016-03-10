@@ -36,6 +36,8 @@
 		CF59BFF07FDE71822E0BDFC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59B67C1CAC157B52055278 /* LaunchScreen.storyboard */; };
 		D8589B2E1C8E47D7001EF0D7 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8589B2D1C8E47D7001EF0D7 /* OHHTTPStubs.framework */; };
 		D8589B2F1C8E51DD001EF0D7 /* OHHTTPStubs.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8589B2D1C8E47D7001EF0D7 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8589B311C918B88001EF0D7 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8589B301C918B88001EF0D7 /* SnapKit.framework */; };
+		D8589B321C918B88001EF0D7 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8589B301C918B88001EF0D7 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8589B341C91ACC4001EF0D7 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8589B331C91ACC4001EF0D7 /* AlamofireImage.framework */; };
 		D8589B351C91ACC4001EF0D7 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8589B331C91ACC4001EF0D7 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8C294611C8C4A55001B2AD4 /* AssetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */; };
@@ -114,6 +116,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D8CA85321C91E7A70099468B /* ObjectMapper.framework in Embed Frameworks */,
+				D8589B321C918B88001EF0D7 /* SnapKit.framework in Embed Frameworks */,
 				D8C2947F1C8C517F001B2AD4 /* TraktSearchAPI.framework in Embed Frameworks */,
 				D8C2948B1C8C56EA001B2AD4 /* Alamofire.framework in Embed Frameworks */,
 				D8CA85301C91E7A70099468B /* AlamofireObjectMapper.framework in Embed Frameworks */,
@@ -197,6 +200,7 @@
 		CF59BF83DCBEDECBF5FD27DB /* SearchMovies.normal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SearchMovies.normal.json; sourceTree = "<group>"; };
 		CF59BFA6BDC02DEFA2F6E2BC /* ImageUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrls.swift; sourceTree = "<group>"; };
 		D8589B2D1C8E47D7001EF0D7 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		D8589B301C918B88001EF0D7 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		D8589B331C91ACC4001EF0D7 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		D8C2945F1C8C4A54001B2AD4 /* TraktSearcherTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraktSearcherTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsTests.swift; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8CA85311C91E7A70099468B /* ObjectMapper.framework in Frameworks */,
+				D8589B311C918B88001EF0D7 /* SnapKit.framework in Frameworks */,
 				D8C2947E1C8C517F001B2AD4 /* TraktSearchAPI.framework in Frameworks */,
 				D8C2948A1C8C56EA001B2AD4 /* Alamofire.framework in Frameworks */,
 				D8CA852F1C91E7A70099468B /* AlamofireObjectMapper.framework in Frameworks */,
@@ -351,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				D8589B331C91ACC4001EF0D7 /* AlamofireImage.framework */,
+				D8589B301C918B88001EF0D7 /* SnapKit.framework */,
 				D8589B2D1C8E47D7001EF0D7 /* OHHTTPStubs.framework */,
 				D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */,
 				D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */,
