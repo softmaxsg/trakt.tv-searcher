@@ -1,6 +1,6 @@
 //
 //  AssetsTests.swift
-//  TraktSearcher
+//  TraktSearcherTests
 //
 //  Copyright © 2016 Vitaly Chupryk. All rights reserved.
 //

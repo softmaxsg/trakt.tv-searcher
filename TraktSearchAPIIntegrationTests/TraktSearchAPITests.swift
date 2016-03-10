@@ -43,24 +43,6 @@ class TraktSearchAPITests: XCTestCase
         super.tearDown()
     }
 
-    func URLForFileName(fileName: String) -> NSURL?
-    {
-        return NSBundle(forClass: self.dynamicType).URLForResource(fileName, withExtension: nil)
-    }
-
-    func JSONObjectWithFileName(fileName: String) -> AnyObject?
-    {
-        guard let fileUrl = self.URLForFileName(fileName) else {
-            return nil
-        }
-
-        guard let jsonData = NSData(contentsOfURL: fileUrl) else {
-            return nil
-        }
-
-        return try? NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions())
-    }
-
     func normalResponseHeaders() -> [String: String]
     {
         return self.JSONObjectWithFileName(self.dynamicType.fileHeadersNormal) as? [String: String] ?? [:]
