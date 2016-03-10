@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MoviesViewModelOutput: class
+public protocol MoviesViewModelOutput: class
 {
     func viewModelDidUpdate()
     func viewModelLoadingDidFail(error: ErrorType)
