@@ -92,6 +92,7 @@
 		D8CA85301C91E7A70099468B /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8CA85311C91E7A70099468B /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; };
 		D8CA85321C91E7A70099468B /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8CA85341C9211DB0099468B /* PopularMoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CA85331C9211DB0099468B /* PopularMoviesViewModelTests.swift */; };
 		D8CA85361C921BF30099468B /* ObjectMapper.framework in Copy Frameworks Files */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8CA85381C921C440099468B /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */; };
 		D8CA853F1C921FA70099468B /* TraktSearchAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C294691C8C517F001B2AD4 /* TraktSearchAPI.framework */; };
@@ -274,6 +275,7 @@
 		D8C294A21C8C8D7A001B2AD4 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		D8C294A51C8C909B001B2AD4 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		D8C294A91C8D7E59001B2AD4 /* PaginationInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationInfoTests.swift; sourceTree = "<group>"; };
+		D8CA85331C9211DB0099468B /* PopularMoviesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewModelTests.swift; sourceTree = "<group>"; };
 		D8D1619A1C8C333B0079F89D /* TraktSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraktSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1619D1C8C333B0079F89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D161A91C8C333B0079F89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 			children = (
 				D8D161B41C8C333B0079F89D /* Info.plist */,
 				D8C294601C8C4A55001B2AD4 /* AssetsTests.swift */,
+				D8CA85331C9211DB0099468B /* PopularMoviesViewModelTests.swift */,
 				CF59B02D1AE1BBE8DEBDEA5E /* TrackSearchAPIMock.swift */,
 				CF59B6C9B738925CA1B82ECE /* MoviesViewModelOutputMock.swift */,
 			);
@@ -823,6 +826,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C294611C8C4A55001B2AD4 /* AssetsTests.swift in Sources */,
+				D8CA85341C9211DB0099468B /* PopularMoviesViewModelTests.swift in Sources */,
 				CF59B6F4A59A5845CB0E19CD /* TrackSearchAPIMock.swift in Sources */,
 				CF59B1CEFA13811E41E5DC28 /* MoviesViewModelOutputMock.swift in Sources */,
 				CF59BF337EF94AEF725CA14B /* XCTestCase+Helpers.swift in Sources */,
