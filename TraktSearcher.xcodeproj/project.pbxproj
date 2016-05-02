@@ -259,6 +259,7 @@
 		CF59BF1CF729D1B3E5480CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF59BFA5DFF6241261AB7522 /* TraktSearchAPIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktSearchAPIProtocol.swift; sourceTree = "<group>"; };
 		CF59BFA6BDC02DEFA2F6E2BC /* ImageUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUrls.swift; sourceTree = "<group>"; };
+		D83246E11CD7FA8A00A733BA /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		D8589B2D1C8E47D7001EF0D7 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		D8589B301C918B88001EF0D7 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		D8589B331C91ACC4001EF0D7 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
@@ -490,6 +491,7 @@
 		D8D161911C8C333B0079F89D = {
 			isa = PBXGroup;
 			children = (
+				D83246E11CD7FA8A00A733BA /* .travis.yml */,
 				D8C294921C8C7DF8001B2AD4 /* TraktSearchAPIIntegrationTests */,
 				D8C2948C1C8C57B9001B2AD4 /* Frameworks */,
 				D8D1619C1C8C333B0079F89D /* TraktSearcher */,
