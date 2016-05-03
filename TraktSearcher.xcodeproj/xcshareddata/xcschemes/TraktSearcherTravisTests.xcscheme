@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -22,15 +21,29 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D8D161991C8C333B0079F89D"
+               BuildableName = "TraktSearcher.app"
+               BlueprintName = "TraktSearcher"
+               ReferencedContainer = "container:TraktSearcher.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D8C294711C8C517F001B2AD4"
-               BuildableName = "TraktSearchAPITests.xctest"
-               BlueprintName = "TraktSearchAPITests"
+               BlueprintIdentifier = "D8D161AD1C8C333B0079F89D"
+               BuildableName = "TraktSearcherTests.xctest"
+               BlueprintName = "TraktSearcherTests"
                ReferencedContainer = "container:TraktSearcher.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,10 +61,24 @@
                ReferencedContainer = "container:TraktSearcher.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D8C294711C8C517F001B2AD4"
+               BuildableName = "TraktSearchAPITests.xctest"
+               BlueprintName = "TraktSearchAPITests"
+               ReferencedContainer = "container:TraktSearcher.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
@@ -77,13 +104,23 @@
                ReferencedContainer = "container:TraktSearcher.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D8D161AD1C8C333B0079F89D"
+               BuildableName = "TraktSearcherTests.xctest"
+               BlueprintName = "TraktSearcherTests"
+               ReferencedContainer = "container:TraktSearcher.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D8C294681C8C517F001B2AD4"
-            BuildableName = "TraktSearchAPI.framework"
-            BlueprintName = "TraktSearchAPI"
+            BlueprintIdentifier = "D8D161991C8C333B0079F89D"
+            BuildableName = "TraktSearcher.app"
+            BlueprintName = "TraktSearcher"
             ReferencedContainer = "container:TraktSearcher.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -91,24 +128,25 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      buildConfiguration = "Release"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D8C294681C8C517F001B2AD4"
-            BuildableName = "TraktSearchAPI.framework"
-            BlueprintName = "TraktSearchAPI"
+            BlueprintIdentifier = "D8D161991C8C333B0079F89D"
+            BuildableName = "TraktSearcher.app"
+            BlueprintName = "TraktSearcher"
             ReferencedContainer = "container:TraktSearcher.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

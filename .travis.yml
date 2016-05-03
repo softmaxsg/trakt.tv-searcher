@@ -7,8 +7,6 @@ before_install:
 - carthage bootstrap --platform ios
 
 xcode_project: TraktSearcher.xcodeproj
-xcode_scheme:
-- TraktSearchAPI
-- TraktSearcher
+xcode_scheme: TraktSearcherTravisTests
 
 xcode_sdk: iphonesimulator9.3
